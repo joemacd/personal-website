@@ -1,0 +1,17 @@
+.footer {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /*For Safari Users*/
+
+  padding: 1rem 2rem;
+  margin: 2rem auto 0;
+  max-width: min(960px, 90vw);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
