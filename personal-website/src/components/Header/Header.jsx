@@ -54,18 +54,4 @@ export default function Header({ active, onNavClick }) {
           {["projects", "about", "contact"].map((section) => (
             <button
               key={section}
-              onClick={() => onNavClick(section)}
-              className={
-                active === section
-                  ? `${styles.navLink} ${styles.active}`
-                  : styles.navLink
-              }
-            >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
-            </button>
-          ))}
-        </nav>
-      </div>
-    </header>
-  );
-}
+              onClick={() => onNavCli

@@ -89,10 +89,4 @@ a:focus-visible .icon {
 
 .github:hover .icon {
   color: #181717;
-} /* GitHub black   */
-.linkedin:hover .icon {
-  color: #0a66c2;
-} /* LinkedIn blue  */
-.gmail:hover .icon {
-  color: #ea4335;
-} /* Gmail red      */
+} /* 
