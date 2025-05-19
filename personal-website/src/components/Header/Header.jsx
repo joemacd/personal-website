@@ -22,7 +22,7 @@ const socials = [
   },
 ];
 
-export default function Header() {
+export default function Header({ active, onNavClick }) {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -51,9 +51,19 @@ export default function Header() {
 
         {/* Site Navigation */}
         <nav className={styles.nav}>
-          <a href="#projects">Projects</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+          {["projects", "about", "contact"].map((section) => (
+            <button
+              key={section}
+              onClick={() => onNavClick(section)}
+              className={
+                active === section
+                  ? `${styles.navLink} ${styles.active}`
+                  : styles.navLink
+              }
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </button>
+          ))}
         </nav>
       </div>
     </header>
