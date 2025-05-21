@@ -1,5 +1,5 @@
 .projectGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* two cards per row */
+  grid-template-columns: repeat(3, 1fr); /* three cards per row */
   gap: 2rem;
 }

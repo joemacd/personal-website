@@ -1,5 +1,10 @@
 import styles from "./Header.module.css";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 
 const socials = [
   {
@@ -22,11 +27,16 @@ const socials = [
   },
 ];
 
+const locations = [
+  { city: "Philadelphia", state: "PA" },
+  { city: "Denver", state: "CO" },
+];
+
 export default function Header({ active, onNavClick }) {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <div className={styles.namesocialsheader}>
+        <div className={styles.namesocialslocationheader}>
           {/* Name/Header */}
           <h1 className={styles.logo}>Joseph&nbsp;MacDougall</h1>
 
@@ -47,6 +57,19 @@ export default function Header({ active, onNavClick }) {
               </li>
             ))}
           </ul>
+
+          {/* Location */}
+          <div className={styles.locationsList}>
+            {locations.map(({ city, state }) => (
+              <div className={styles.locationCell} key={city + state}>
+                <FaMapMarkerAlt className={styles.locationIcon} />
+                <div className={styles.locationText}>
+                  <span className={styles.city}>{city}</span>
+                  <span className={styles.state}>, {state}</span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Site Navigation */}

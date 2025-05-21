@@ -6,7 +6,7 @@
 
 .logo {
   margin: 0;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 .container {
@@ -16,14 +16,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 6rem;
 }
 
-.namesocialsheader {
+/* Name, Social, & Location sCombined Header Styler */
+.namesocialslocationheader {
   display: flex;
   flex-direction: column;
 }
 
+/* Site Nav Bar */
 .nav {
   display: flex;
   gap: 2.25rem; /* uniform spacing between buttons */
@@ -60,6 +62,7 @@
   color: #0099f5;
 }
 
+/* Socials */
 .socialList {
   list-style: none;
   margin-top: 0.7rem;
@@ -96,3 +99,52 @@ a:focus-visible .icon {
 .gmail:hover .icon {
   color: #ea4335;
 } /* Gmail red      */
+
+/* Location(s) */
+.locationsList {
+  margin-top: 0.3rem;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.locationCell {
+  padding: 0.25rem 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  background: #ffffff;
+  border-radius: 100px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+  font-size: 1rem;
+  color: #111827;
+}
+
+.locationIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #ea4335; /* using the same as "gmail red" for color consistency */
+}
+
+.locationText {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.2rem;
+}
+
+.city {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  letter-spacing: 0.5px;
+}
+
+.state {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #111827;
+  opacity: 0.6;
+}
