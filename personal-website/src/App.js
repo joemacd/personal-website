@@ -9,7 +9,7 @@ import AboutSection from "./sections/AboutSection";
 import ContactSection from "./sections/ContactSection";
 
 function App() {
-  const [activeSection, setActiveSection] = useState("projects");
+  const [activeSection, setActiveSection] = useState("about");
 
   return (
     <>

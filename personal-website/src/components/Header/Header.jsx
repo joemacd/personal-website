@@ -51,7 +51,7 @@ export default function Header({ active, onNavClick }) {
 
         {/* Site Navigation */}
         <nav className={styles.nav}>
-          {["projects", "about", "contact"].map((section) => (
+          {["about", "projects", "contact"].map((section) => (
             <button
               key={section}
               onClick={() => onNavClick(section)}
