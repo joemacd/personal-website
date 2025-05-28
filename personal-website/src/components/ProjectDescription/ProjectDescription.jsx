@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
-import styles from "./ProjectCard.module.css";
+import styles from "./ProjectDescription.module.css";
 
-export default function ProjectCard({
+export default function ProjectDescription({
   title,
+  description,
   imageUrl,
   repoUrl,
   demoUrl,
@@ -20,7 +21,8 @@ export default function ProjectCard({
       }}
     >
       <div className={styles.overlay}>
-        <h1 className={styles.title}>{title}</h1>
+        <h3 className={styles.title}>{title}</h3>
+        <p className={styles.description}>{description}</p>
         <div className={styles.links}>
           {repoUrl && (
             <a
@@ -54,7 +56,7 @@ export default function ProjectCard({
   );
 }
 
-ProjectCard.propTypes = {
+ProjectDescription.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired,

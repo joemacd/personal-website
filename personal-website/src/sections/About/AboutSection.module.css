@@ -1,19 +1,10 @@
-/* PROJECTS */
-
-.projectGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* three cards per row */
-  gap: 2rem;
-}
-
-/* ------------------------------------------------------------------------------- */
-
 /* ABOUT */
 
 .about {
   position: relative;
   padding: 5rem 1rem 3rem;
   max-width: 1160px;
+  width: 80%;
   margin: 0 auto;
   background: #fff;
   border-radius: 1rem;

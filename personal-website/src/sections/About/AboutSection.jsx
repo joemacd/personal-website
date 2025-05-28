@@ -1,4 +1,4 @@
-import styles from "./Sections.module.css";
+import styles from "./AboutSection.module.css";
 
 import React, { useRef, useState } from "react";
 

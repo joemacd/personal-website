@@ -4,9 +4,9 @@ import { useState } from "react";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
-import ProjectsSection from "./sections/ProjectsSection";
-import AboutSection from "./sections/AboutSection";
-import ContactSection from "./sections/ContactSection";
+import ProjectsSection from "./sections/Projects/ProjectsSection";
+import AboutSection from "./sections/About/AboutSection";
+import ContactSection from "./sections/Contact/ContactSection";
 
 function App() {
   const [activeSection, setActiveSection] = useState("about");
