@@ -1,5 +1,136 @@
+/* PROJECTS */
+
 .projectGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* three cards per row */
   gap: 2rem;
+}
+
+/* ------------------------------------------------------------------------------- */
+
+/* ABOUT */
+
+.about {
+  position: relative;
+  padding: 5rem 1rem 3rem;
+  max-width: 1160px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  overflow: visible;
+}
+
+@keyframes runInPlace {
+  /* shift the background left in equal steps to show each frame */
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -384px 0;
+  }
+}
+
+.dogWrapper {
+  position: absolute;
+  top: 10rem;
+  left: 50px;
+
+  width: 48px;
+  height: 32px;
+
+  transition: transform 1.2s ease-in-out;
+}
+
+.dog_sit {
+  width: 48px;
+  height: 32px;
+
+  background-image: url("/public/Dog Sprites/Dog 1 - Beagle/Sit/dog_1_sit.png");
+  background-repeat: no-repeat;
+
+  background-size: 48px 32px;
+  transform: scale(3);
+
+  image-rendering: pixelated;
+  transform-origin: top center;
+}
+
+.dog_running {
+  width: 48px;
+  height: 32px;
+
+  background-image: url("/public/Dog Sprites/Dog 1 - Beagle/Walk/dog_1_walk_sheet.png");
+  background-repeat: no-repeat;
+
+  background-size: 384px 32px;
+  transform: scale(3);
+
+  animation: runInPlace 0.5s steps(8) infinite;
+  image-rendering: pixelated;
+  transform-origin: top center;
+}
+
+/* bubble styling */
+.bubble {
+  position: absolute;
+  bottom: 32px;
+
+  width: 250%;
+
+  padding: 0.5rem 0.75rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.2;
+}
+
+.bubble p {
+  margin: 0.25rem 0 0;
+}
+
+/* the little triangle/tail */
+.bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  transform: translateX(-50%);
+  border-width: 0.5rem;
+  border-style: solid;
+  border-color: #000000 transparent transparent transparent;
+}
+
+.bubble[data-direction="1"]::after {
+  left: 20%;
+}
+
+.bubble[data-direction="-1"]::after {
+  left: 80%;
+}
+
+.panels {
+  display: flex;
+  gap: 2rem;
+  margin-top: 12rem; /* give dog room to walk above */
+}
+
+/* each panel is one “stop” for the dog */
+.panel {
+  flex: 1;
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.panel p {
+  line-height: 1.6;
+  margin-bottom: 0;
 }
