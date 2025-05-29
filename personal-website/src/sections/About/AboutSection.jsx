@@ -51,9 +51,20 @@ export default function AboutSection() {
 
   const MOUTH_X = 32;
 
+  const handlePetTheDog = () => {
+    if (dogState == "run") return;
+
+    setDogState("wag");
+
+    setTimeout(() => {
+      setDogState("sit");
+    }, 1200);
+  };
+
   const handlePanelClick = (index) => {
     const panel = panelRefs[index].current;
     if (!panel) return;
+    if (dogState != "sit") return;
 
     //compute distance from the left edge of the .about container
     const containerLeft = panel.parentElement.getBoundingClientRect().left;
@@ -71,10 +82,11 @@ export default function AboutSection() {
       setDogX(offsetX);
     });
 
+    setSelectedPanel(index);
+
     setTimeout(() => {
       setDogState("sit");
-      setSelectedPanel(index);
-    }, 1200);
+    }, 1500);
   };
 
   const mouthOffset = 32 * 3;
@@ -91,15 +103,22 @@ export default function AboutSection() {
           <div
             role="img"
             aria-label="Dog"
-            className={dogState === "run" ? styles.dog_running : styles.dog_sit}
+            className={
+              dogState === "run"
+                ? styles.dog_running
+                : dogState === "wag"
+                ? styles.dog_wag_tail
+                : styles.dog_sit
+            }
             style={{
-              transform: `scaleX(${direction * 3})
-                          scaleY(3)`,
+              transform: `scaleX(${direction * 3}) scaleY(3)`,
+              ...(dogState === "sit" ? { cursor: "pointer" } : {}),
             }}
+            onClick={() => handlePetTheDog()}
           />
 
           {/* only when sitting, show the bubble */}
-          {dogState === "sit" && (
+          {(dogState === "sit" || dogState === "wag") && (
             <div
               className={styles.bubble}
               data-direction={direction}

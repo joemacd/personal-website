@@ -23,6 +23,16 @@
   }
 }
 
+/* Identical to runInPlace: just shifting a sprite sheet */
+@keyframes wagTail {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -384px 0;
+  }
+}
+
 .dogWrapper {
   position: absolute;
   top: 10rem;
@@ -31,7 +41,7 @@
   width: 48px;
   height: 32px;
 
-  transition: transform 1.2s ease-in-out;
+  transition: transform 1.5s ease-in-out;
 }
 
 .dog_sit {
@@ -59,6 +69,21 @@
   transform: scale(3);
 
   animation: runInPlace 0.5s steps(8) infinite;
+  image-rendering: pixelated;
+  transform-origin: top center;
+}
+
+.dog_wag_tail {
+  width: 48px;
+  height: 32px;
+
+  background-image: url("/public/Dog Sprites/Dog 1 - Beagle/Wag/dog_1_wag_sheet.png");
+  background-repeat: no-repeat;
+
+  background-size: 384px 32px;
+  transform: scale(3);
+
+  animation: wagTail 0.3s steps(8) infinite;
   image-rendering: pixelated;
   transform-origin: top center;
 }
@@ -145,6 +170,7 @@
   box-shadow: 0 6px 16px rgba(0, 122, 255, 0.2);
   border: 2px solid #007aff; /* blue border accent */
   color: #000000;
+  cursor: default;
 }
 
 .panel.selected:hover {
