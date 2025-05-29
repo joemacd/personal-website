@@ -1,4 +1,5 @@
 .header {
+  width: 100%;
   background: #111827;
   color: #f9fafb;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -6,7 +7,7 @@
 
 .logo {
   margin: 0;
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 .container {
@@ -16,7 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 6rem;
+  gap: 3rem;
 }
 
 /* Name, Social, & Location sCombined Header Styler */
@@ -66,8 +67,8 @@
 .socialList {
   list-style: none;
   margin-top: 0.7rem;
-  padding: 0.25rem 0.75rem;
-  gap: 1rem;
+  padding: 0.25rem 0rem;
+  gap: 0.5rem;
 
   display: flex;
   justify-content: space-evenly;
@@ -147,4 +148,72 @@ a:focus-visible .icon {
   font-weight: 400;
   color: #111827;
   opacity: 0.6;
+}
+
+/*---------- Responsive Design ----------*/
+
+/* less-than-large laptop */
+@media (max-width: 1024px) {
+  .nav {
+    flex-direction: column;
+  }
+
+  .nav button {
+    font-size: 2rem;
+  }
+
+  .container {
+    justify-content: space-evenly;
+  }
+}
+
+/* tablet / small-desktop */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 3.2rem;
+  }
+
+  .nav {
+    flex-direction: row;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .socialList {
+    gap: 0.5rem;
+    margin-top: 0.7rem;
+  }
+}
+
+/* mobile phones */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 2rem;
+  }
+
+  .locationsList {
+    display: none;
+  }
+
+  .socialList {
+    padding: 0.2rem 0.5rem;
+    gap: 0.2rem;
+    margin-top: 0.5rem;
+  }
+
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .nav button {
+    font-size: 1.2rem;
+    padding: 0.25rem;
+  }
+
+  .container {
+    gap: 0rem;
+  }
 }
