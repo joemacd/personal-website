@@ -2,6 +2,13 @@ import styles from "./AboutSection.module.css";
 
 import React, { useRef, useState } from "react";
 
+import Typewriter from "typewriter-effect";
+
+import GetToKnowMe from "./AboutTabs/GetToKnowMe/GetToKnowMe";
+import WorkExperience from "./AboutTabs/WorkExperience/WorkExperience";
+import Education from "./AboutTabs/Education/Education";
+import InterestsAndSkills from "./AboutTabs/InterestsAndSkills/InterestsAndSkills";
+
 export default function AboutSection() {
   const panels = [
     {
@@ -25,19 +32,19 @@ export default function AboutSection() {
   const dogBubbles = [
     {
       title: "*Woof Woof*",
-      text: "I'm Scruffy, Joe's dog!",
-    },
-    {
-      title: "*Bark Bark*",
-      text: "Joe moved away to Philadelphia to pursue a degree in CS at the University of Pennsylvania.",
-    },
-    {
-      title: "*Bark Woof*",
-      text: "Joe enjoys a variety of CS topics including: frontend design, yada yada",
+      text: "I'm Scruffy, Joe's dog (and sometimes debugger). Please click on any section below to learn more!",
     },
     {
       title: "*Woof Bark*",
-      text: "bob",
+      text: "Joe has worked on a variety of projects: from his university's mobile app to hospital message routing systems to lane detection software for small racecars.",
+    },
+    {
+      title: "*Bark Bark*",
+      text: "Joe moved away to Philadelphia to pursue higher education at the University of Pennsylvania. Here, he is looking to graduate in 2027 with a Bachelor's and Master's in CS and minors in Mathematics, Psychology, and Data Science.",
+    },
+    {
+      title: "*Bark Woof*",
+      text: "Joe enjoys a variety of topics including: Fullstack Development, CS theory, ML & Embedded Systems, Low-Level Programming, and so much more. Though, his favorite activity has to be spending time with his dog.",
     },
   ];
 
@@ -128,8 +135,18 @@ export default function AboutSection() {
                   : { right: `${MOUTH_X}px` }
               }
             >
-              <strong>{dogBubbles[selectedPanel].title}</strong>
-              <p>{dogBubbles[selectedPanel].text}</p>
+              <strong style={{ fontSize: 15 }}>
+                {dogBubbles[selectedPanel].title}
+              </strong>
+              <Typewriter
+                options={{
+                  strings: [dogBubbles[selectedPanel].text],
+                  autoStart: true,
+                  delay: 40,
+                  loop: true,
+                  pauseFor: 60000,
+                }}
+              />
             </div>
           )}
         </div>
@@ -151,6 +168,12 @@ export default function AboutSection() {
           ))}
         </div>
       </section>
+      <div className={styles.popupContainer}>
+        {selectedPanel === 0 && <GetToKnowMe />}
+        {selectedPanel === 1 && <WorkExperience />}
+        {selectedPanel === 2 && <Education />}
+        {selectedPanel === 3 && <InterestsAndSkills />}
+      </div>
     </div>
   );
 }

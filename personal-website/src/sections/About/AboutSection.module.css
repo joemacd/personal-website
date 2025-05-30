@@ -2,7 +2,7 @@
 
 .about {
   position: relative;
-  padding: 5rem 1rem 3rem;
+  padding: 5rem 1rem 2rem;
   /* max-width: 1160px; */
   width: 87%;
   margin: 0 auto;
@@ -183,3 +183,18 @@
   line-height: 1.6;
   margin-bottom: 0;
 } */
+
+/* POPUP Component */
+.popupContainer {
+  position: relative;
+  padding: 1rem 1rem 1rem;
+  /* max-width: 1160px; */
+  width: 87%;
+  margin: 0 auto;
+  margin-top: 10px;
+  border-radius: 2rem;
+  border: 3px solid #111827;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+
+  background-color: rgba(255, 255, 255, 0.8);
+}
