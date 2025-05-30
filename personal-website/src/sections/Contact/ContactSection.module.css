@@ -1,0 +1,36 @@
+.container {
+  width: 70%;
+  margin: 0 auto 1.5rem;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.header {
+  width: 95%;
+  margin: 0 auto 1.5rem;
+  background: #111827;
+  color: #f9fafb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 0.75rem 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.textInputWrapper {
+  display: flex;
+  margin: 0 auto 1.5rem;
+  width: 95%;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 3rem;
+}
