@@ -77,20 +77,6 @@ export const timelineData = [
   },
   {
     text: [
-      "Created a mobile homepage feature for group study room booking & display.",
-    ],
-    date: "Spring 2024",
-    category: {
-      tag: "PennLabs",
-      color: "#a90af5",
-    },
-    link: {
-      url: "https://pennlabs.org/products/penn-mobile",
-      text: "See More",
-    },
-  },
-  {
-    text: [
       "Created the MDAware Demo App to showcase patient message classification model features, logic, and impact; used at business expos and client conferences.",
     ],
     date: "Summer 2024",
@@ -114,6 +100,20 @@ export const timelineData = [
     },
     link: {
       url: "https://www.switchboardmd.com/",
+      text: "See More",
+    },
+  },
+  {
+    text: [
+      "Created a mobile homepage feature for group study room booking & display.",
+    ],
+    date: "Spring 2024",
+    category: {
+      tag: "PennLabs",
+      color: "#a90af5",
+    },
+    link: {
+      url: "https://pennlabs.org/products/penn-mobile",
       text: "See More",
     },
   },
