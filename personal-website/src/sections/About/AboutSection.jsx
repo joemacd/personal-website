@@ -142,7 +142,7 @@ export default function AboutSection() {
                 options={{
                   strings: [dogBubbles[selectedPanel].text],
                   autoStart: true,
-                  delay: 40,
+                  delay: 35,
                   loop: true,
                   pauseFor: 60000,
                 }}

@@ -1,0 +1,14 @@
+.timelineContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: rgba(255, 255, 255, 0.7);
+}
+.timelineContainer::after {
+  background-color: #111827;
+  content: "";
+  position: absolute;
+  left: calc(50% - 2px);
+  width: 4px;
+  height: 100%;
+}
