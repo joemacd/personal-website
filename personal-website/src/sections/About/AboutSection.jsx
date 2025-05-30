@@ -100,7 +100,7 @@ export default function AboutSection() {
   const bubbleLeft = direction === 1 ? mouthOffset : mouthOffset - 48 * 3;
 
   return (
-    <div style={{ background: " #8ee0f2" }}>
+    <div style={{ background: " #8ee0f2", paddingBottom: "10px" }}>
       <section id="about" className={styles.about}>
         {/* the dog */}
         <div
