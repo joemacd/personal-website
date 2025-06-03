@@ -2,7 +2,7 @@
 
 .about {
   position: relative;
-  padding: 5rem 1rem 2rem;
+  padding: 5rem 1rem 1rem;
   /* max-width: 1160px; */
   width: 87%;
   margin: 0 auto;
@@ -35,7 +35,7 @@
 
 .dogWrapper {
   position: absolute;
-  top: 10rem;
+  top: 4rem;
   left: 50px;
 
   width: 48px;
@@ -93,7 +93,7 @@
   position: absolute;
   bottom: 32px;
 
-  width: 250%;
+  width: 550%;
 
   padding: 0.5rem 0.75rem;
   background: #fff;
@@ -121,17 +121,17 @@
 }
 
 .bubble[data-direction="1"]::after {
-  left: 20%;
+  left: 15%;
 }
 
 .bubble[data-direction="-1"]::after {
-  left: 80%;
+  left: 10%;
 }
 
 .panels {
   display: flex;
   gap: 2rem;
-  margin-top: 12rem; /* give dog room to walk above */
+  margin-top: 5rem; /* give dog room to walk above */
 }
 
 /* each panel is one “stop” for the dog */
@@ -146,7 +146,7 @@
   justify-content: center;
   background: #111827;
   color: #f9fafb;
-  padding: 1.5rem;
+  padding: 0.8rem;
   border-radius: 0.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: background 200ms ease, box-shadow 200ms ease, transform 200ms ease;

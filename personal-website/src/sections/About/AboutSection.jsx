@@ -40,11 +40,11 @@ export default function AboutSection() {
     },
     {
       title: "*Bark Bark*",
-      text: "Joe moved away to Philadelphia to pursue higher education at the University of Pennsylvania. Here, he is looking to graduate in 2027 with a Bachelor's and Master's in CS and minors in Mathematics, Psychology, and Data Science.",
+      text: "Joe currently attends the University of Pennsylvania. He will graduate in 2027 with a Bachelor's and Master's in CS and minors in Mathematics, Psychology, and Data Science.",
     },
     {
       title: "*Bark Woof*",
-      text: "Joe enjoys a variety of topics including: Fullstack Development, CS theory, ML & Embedded Systems, Low-Level Programming, and so much more. Though, his favorite activity has to be spending time with his dog.",
+      text: "Apart from walking his dog, Joe enjoys a variety of topics including: Fullstack Development, CS theory, ML & Embedded Systems, and so much more.",
     },
   ];
 
@@ -132,7 +132,7 @@ export default function AboutSection() {
               style={
                 direction === 1
                   ? { left: `${MOUTH_X}px` }
-                  : { right: `${MOUTH_X}px` }
+                  : { left: `${MOUTH_X - 48}px` }
               }
             >
               <strong style={{ fontSize: 15 }}>
