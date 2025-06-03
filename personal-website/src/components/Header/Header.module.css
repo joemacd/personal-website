@@ -156,6 +156,7 @@ a:focus-visible .icon {
 @media (max-width: 1024px) {
   .nav {
     flex-direction: column;
+    gap: 1rem;
   }
 
   .nav button {
@@ -175,6 +176,7 @@ a:focus-visible .icon {
 
   .nav {
     flex-direction: row;
+    gap: 2.25rem;
   }
 
   .container {
