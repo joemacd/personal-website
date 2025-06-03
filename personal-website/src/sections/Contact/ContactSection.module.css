@@ -34,3 +34,17 @@
   margin-top: 1rem;
   gap: 3rem;
 }
+
+/* tablet / small-desktop */
+@media (max-width: 768px) {
+  .textInputWrapper {
+    gap: 1.5rem;
+  }
+}
+
+/* mobile phones */
+@media (max-width: 480px) {
+  .textInputWrapper {
+    gap: 1rem;
+  }
+}
