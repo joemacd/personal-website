@@ -4,7 +4,7 @@ html,
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
 }
 
 .App {
@@ -13,20 +13,10 @@ html,
   min-height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  color: white;
-  padding: 2rem;
-  text-align: center;
+.content {
+  min-height: 100vw;
 }
 
 main {
   flex: 1;
-  padding: 1rem 2rem;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #f0f0f0;
 }

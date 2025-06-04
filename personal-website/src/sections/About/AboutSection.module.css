@@ -2,15 +2,18 @@
 
 .about {
   position: relative;
-  padding: 5rem 1rem 1rem;
+  padding: 1rem 1rem 1rem;
   /* max-width: 1160px; */
-  width: 87%;
+  width: 98%;
   margin: 0 auto;
+  border: 2px solid #ffffff;
   border-radius: 1rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
   overflow: visible;
 
-  background-color: rgba(255, 255, 255, 0.5);
+  /* background-color: rgba(142, 224, 242, 0.8); */
+  /* background-color: rgba(255, 255, 255, 1); */
+  background-color: #111827;
 }
 
 @keyframes runInPlace {
@@ -35,7 +38,7 @@
 
 .dogWrapper {
   position: absolute;
-  top: 4rem;
+  top: 1rem;
   left: 50px;
 
   width: 48px;
@@ -52,7 +55,7 @@
   background-repeat: no-repeat;
 
   background-size: 48px 32px;
-  transform: scale(3);
+  transform: scale(2.5);
 
   image-rendering: pixelated;
   transform-origin: top center;
@@ -66,7 +69,7 @@
   background-repeat: no-repeat;
 
   background-size: 384px 32px;
-  transform: scale(3);
+  transform: scale(2.5);
 
   animation: runInPlace 0.5s steps(8) infinite;
   image-rendering: pixelated;
@@ -81,7 +84,7 @@
   background-repeat: no-repeat;
 
   background-size: 384px 32px;
-  transform: scale(3);
+  transform: scale(2.5);
 
   animation: wagTail 0.3s steps(8) infinite;
   image-rendering: pixelated;
@@ -92,6 +95,8 @@
 .bubble {
   position: absolute;
   bottom: 32px;
+
+  cursor: pointer;
 
   width: 550%;
 
@@ -118,35 +123,29 @@
   border-width: 0.75rem;
   border-style: solid;
   border-color: #111827 transparent transparent transparent;
-}
-
-.bubble[data-direction="1"]::after {
-  left: 15%;
-}
-
-.bubble[data-direction="-1"]::after {
   left: 10%;
 }
 
 .panels {
   display: flex;
   gap: 2rem;
-  margin-top: 5rem; /* give dog room to walk above */
+  margin-top: 1rem; /* give dog room to walk above */
 }
 
 /* each panel is one “stop” for the dog */
 .panel {
-  display: flex; /* make it a flex container */
-  flex-direction: column; /* stack children vertically */
-  align-items: center; /* center horizontally */
-  justify-content: center; /* center vertically */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   flex: 1;
   align-items: center;
   justify-content: center;
+  border: 2px solid #f9fafb;
   background: #111827;
   color: #f9fafb;
-  padding: 0.8rem;
+  padding: 0.3rem;
   border-radius: 0.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: background 200ms ease, box-shadow 200ms ease, transform 200ms ease;
@@ -168,33 +167,46 @@
 .panel.selected {
   background: #e0f4ff; /* light-blue highlight */
   box-shadow: 0 6px 16px rgba(0, 122, 255, 0.2);
-  border: 2px solid #007aff; /* blue border accent */
+  border: 2px solid #007aff;
   color: #000000;
   cursor: default;
 }
 
 .panel.selected:hover {
-  /* you can even tweak hover for selected */
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(0, 122, 255, 0.3);
 }
 
-/* .panel p {
-  line-height: 1.6;
-  margin-bottom: 0;
-} */
-
 /* POPUP Component */
 .popupContainer {
   position: relative;
-  padding: 1rem 1rem 1rem;
+  /* padding: 1rem 1rem 1rem; */
   /* max-width: 1160px; */
-  width: 87%;
+  width: 98%;
   margin: 0 auto;
-  margin-top: 10px;
-  border-radius: 2rem;
+  /* border-radius: 2rem; */
   border: 3px solid #111827;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  margin-bottom: 300px;
 
   background-color: rgba(255, 255, 255, 0.8);
+}
+
+.stickyNav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  height: 178px;
+  z-index: 150;
+  display: flex;
+  justify-content: center;
+  /* background-color: #8ee0f2; */
+}
+
+/* ensures dogWrapper can remain absolutely positioned */
+.stickyInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }

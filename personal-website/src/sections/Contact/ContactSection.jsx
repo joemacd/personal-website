@@ -71,7 +71,8 @@ export default function ContactSection() {
           label="Message"
           multiline
           fullWidth
-          maxRows={4}
+          maxRows={8}
+          minRows={4}
           onChange={(e) =>
             setValues((v) => ({ ...v, message: e.target.value }))
           }

@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./App.css";
 import { useState } from "react";
 
 import Header from "./components/Header/Header";
@@ -15,13 +16,13 @@ function App() {
     <>
       <Header active={activeSection} onNavClick={setActiveSection} />
 
-      <main className="content">
+      <main className={styles.content}>
         {activeSection === "projects" && <ProjectsSection />}
         {activeSection === "about" && <AboutSection />}
         {activeSection === "contact" && <ContactSection />}
       </main>
 
-      <Footer />
+      {activeSection !== "about" && <Footer />}
     </>
   );
 }

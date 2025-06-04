@@ -13,19 +13,19 @@ export default function AboutSection() {
   const panels = [
     {
       title: "Get to Know Me",
-      text: "yap",
+      text: "",
     },
     {
       title: "Work Experience",
-      text: "Currently a BSE in Computer Science at UPenn (Class of ’27).",
+      text: "",
     },
     {
       title: "Education",
-      text: "yap",
+      text: "",
     },
     {
       title: "Interests & Skills",
-      text: "dummy text.",
+      text: "",
     },
   ];
 
@@ -54,6 +54,8 @@ export default function AboutSection() {
 
   const [selectedPanel, setSelectedPanel] = useState(0);
 
+  const [isBubbleHidden, setIsBubbleHidden] = useState(false);
+
   const panelRefs = [useRef(), useRef(), useRef(), useRef()];
 
   const MOUTH_X = 32;
@@ -72,6 +74,9 @@ export default function AboutSection() {
     const panel = panelRefs[index].current;
     if (!panel) return;
     if (dogState != "sit") return;
+
+    //bubble appears regardless on new nav click
+    setIsBubbleHidden(false);
 
     //compute distance from the left edge of the .about container
     const containerLeft = panel.parentElement.getBoundingClientRect().left;
@@ -100,79 +105,102 @@ export default function AboutSection() {
   const bubbleLeft = direction === 1 ? mouthOffset : mouthOffset - 48 * 3;
 
   return (
-    <div style={{ background: " #8ee0f2", paddingBottom: "10px" }}>
-      <section id="about" className={styles.about}>
-        {/* the dog */}
-        <div
-          className={styles.dogWrapper}
-          style={{ transform: `translateX(${dogX}px)` }}
-        >
-          <div
-            role="img"
-            aria-label="Dog"
-            className={
-              dogState === "run"
-                ? styles.dog_running
-                : dogState === "wag"
-                ? styles.dog_wag_tail
-                : styles.dog_sit
-            }
-            style={{
-              transform: `scaleX(${direction * 3}) scaleY(3)`,
-              ...(dogState === "sit" ? { cursor: "pointer" } : {}),
-            }}
-            onClick={() => handlePetTheDog()}
-          />
-
-          {/* only when sitting, show the bubble */}
-          {(dogState === "sit" || dogState === "wag") && (
-            <div
-              className={styles.bubble}
-              data-direction={direction}
-              style={
-                direction === 1
-                  ? { left: `${MOUTH_X}px` }
-                  : { left: `${MOUTH_X - 48}px` }
-              }
-            >
-              <strong style={{ fontSize: 15 }}>
-                {dogBubbles[selectedPanel].title}
-              </strong>
-              <Typewriter
-                options={{
-                  strings: [dogBubbles[selectedPanel].text],
-                  autoStart: true,
-                  delay: 35,
-                  loop: true,
-                  pauseFor: 60000,
-                }}
-              />
-            </div>
-          )}
-        </div>
-
-        <div className={styles.panels}>
-          {panels.map((p, i) => (
-            <div
-              key={p.title}
-              ref={panelRefs[i]}
-              className={
-                `${styles.panel}` +
-                (selectedPanel === i ? ` ${styles.selected}` : "")
-              }
-              onClick={() => handlePanelClick(i)}
-            >
-              <h2>{p.title}</h2>
-              {/* {panels[selectedPanel].title == p.title && <p>{p.text}</p>} */}
-            </div>
-          ))}
-        </div>
-      </section>
+    <div
+      style={{
+        background: "#8ee0f2",
+        minHeight: "85vh",
+        paddingBottom: "10px",
+        paddingTop: "10px",
+      }}
+    >
       <div className={styles.popupContainer}>
         {selectedPanel === 0 && <GetToKnowMe />}
         {selectedPanel === 1 && <WorkExperience />}
         {selectedPanel === 2 && <Education />}
         {selectedPanel === 3 && <InterestsAndSkills />}
+      </div>
+      <div className={styles.stickyNav}>
+        <div className={styles.stickyInner}>
+          <section id="about" className={styles.about}>
+            <div
+              style={{
+                position: "relative",
+                background: "#ffffff",
+                height: "5rem",
+                width: "100%",
+              }}
+            />
+            {/* the dog */}
+            <div
+              className={styles.dogWrapper}
+              style={{ transform: `translateX(${dogX}px)` }}
+            >
+              <div
+                role="img"
+                aria-label="Dog"
+                className={
+                  dogState === "run"
+                    ? styles.dog_running
+                    : dogState === "wag"
+                    ? styles.dog_wag_tail
+                    : styles.dog_sit
+                }
+                style={{
+                  transform: `scaleX(${direction * 2.5}) scaleY(2.5)`,
+                  ...(dogState === "sit" ? { cursor: "pointer" } : {}),
+                }}
+                onClick={() => handlePetTheDog()}
+              />
+
+              {/* only when sitting, show the bubble */}
+
+              {(dogState === "sit" || dogState === "wag") && (
+                <div
+                  className={styles.bubble}
+                  onClick={() => setIsBubbleHidden(!isBubbleHidden)}
+                  data-direction={direction}
+                  style={
+                    direction === 1
+                      ? { left: `${MOUTH_X}px` }
+                      : { left: `${MOUTH_X - 48}px` }
+                  }
+                >
+                  <strong style={{ fontSize: 15 }}>
+                    {dogBubbles[selectedPanel].title}
+                  </strong>
+                  {!isBubbleHidden && (
+                    <Typewriter
+                      options={{
+                        strings: [dogBubbles[selectedPanel].text],
+                        autoStart: true,
+                        delay: 32,
+                        loop: true,
+                        pauseFor: 60000,
+                      }}
+                    />
+                  )}
+                </div>
+              )}
+            </div>
+
+            <div className={styles.panels}>
+              {panels.map((p, i) => (
+                <div
+                  key={p.title}
+                  ref={panelRefs[i]}
+                  className={
+                    `${styles.panel}` +
+                    (selectedPanel === i ? ` ${styles.selected}` : "")
+                  }
+                  onClick={() => handlePanelClick(i)}
+                >
+                  <h2>{p.title}</h2>
+                  {/* {panels[selectedPanel].title == p.title && <p>{p.text}</p>} */}
+                </div>
+              ))}
+            </div>
+          </section>
+        </div>
       </div>
     </div>
   );

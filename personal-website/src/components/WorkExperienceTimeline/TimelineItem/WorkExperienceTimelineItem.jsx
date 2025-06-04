@@ -26,7 +26,7 @@ export default function WorkExperienceTimelineItem({ data }) {
               {data.skills.map(({ skill, inline }, idx) => (
                 <li key={idx}>
                   {inline && (
-                    <i className={`ci ${inline} ci-md ${styles.skillIcon}`}></i>
+                    <i className={`ci ${inline} ci-sm ${styles.skillIcon}`}></i>
                   )}
                   <span className={styles.skillLabel}>{skill}</span>
                 </li>

@@ -4,6 +4,8 @@
   position: relative;
   background: rgba(255, 255, 255, 0.7);
 
+  width: 100%;
+
   padding-top: 30px;
   padding-bottom: 30px;
 }
