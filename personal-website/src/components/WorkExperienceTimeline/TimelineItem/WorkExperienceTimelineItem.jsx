@@ -11,14 +11,30 @@ export default function WorkExperienceTimelineItem({ data }) {
           {data.category.tag}
         </span>
         <time>{data.date}</time>
-        {data.text.map((sentence) => (
-          <p>{sentence}</p>
+        {data.text.map((sentence, idx) => (
+          <p key={idx}>{sentence}</p>
         ))}
         {data.link && (
           <a href={data.link.url} target="_blank" rel="noopener noreferrer">
             {data.link.text}
           </a>
         )}
+
+        {data.skills && data.skills.length > 0 && (
+          <div className={styles.timelineItemTechSkills}>
+            <ul>
+              {data.skills.map(({ skill, inline }, idx) => (
+                <li key={idx}>
+                  {inline && (
+                    <i className={`ci ${inline} ci-md ${styles.skillIcon}`}></i>
+                  )}
+                  <span className={styles.skillLabel}>{skill}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
         <span className={styles.circle} />
       </div>
     </div>

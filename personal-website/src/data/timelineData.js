@@ -10,6 +10,16 @@ export const timelineData = [
       url: "https://www.switchboardmd.com/",
       text: "See More",
     },
+    skills: [
+      { skill: "Chime SDK", inline: "ci-aws" },
+      { skill: "Python", inline: "ci-python" },
+      { skill: "React", inline: "ci-react" },
+      { skill: "Typescript", inline: "ci-typescript" },
+      { skill: "Javascript", inline: "ci-javascript" },
+      { skill: "Amplify", inline: "ci-aws" },
+      { skill: "Lambda", inline: "ci-aws" },
+      { skill: "Cognito", inline: "ci-aws" },
+    ],
   },
   {
     text: ["Constructing a PBX Server with Asterisk for voice-to-voice AI."],
@@ -22,6 +32,12 @@ export const timelineData = [
       url: "https://www.switchboardmd.com/",
       text: "See More",
     },
+    skills: [
+      { skill: "Asterisk" },
+      { skill: "EC2", inline: "ci-ec2" },
+      { skill: "Linux", inline: "ci-linux" },
+      { skill: "VoIP" },
+    ],
   },
   {
     text: [
@@ -36,6 +52,11 @@ export const timelineData = [
       url: "https://www.cis.upenn.edu/~cis1210/current/",
       text: "See More",
     },
+    skills: [
+      { skill: "Data Structures" },
+      { skill: "Java", inline: "ci-java" },
+      { skill: "Teaching", inline: "ci-scholar" },
+    ],
   },
   {
     text: [
@@ -50,6 +71,10 @@ export const timelineData = [
       url: "https://xlab.upenn.edu/",
       text: "See More",
     },
+    skills: [
+      { skill: "OpenCV", inline: "ci-opencv" },
+      { skill: "Python", inline: "ci-python" },
+    ],
   },
   {
     text: ["Served as a project mentor to onboard new android developers."],
@@ -62,6 +87,10 @@ export const timelineData = [
       url: "https://pennlabs.org/products/penn-mobile",
       text: "See More",
     },
+    skills: [
+      { skill: "Android Studio", inline: "ci-androidstudio" },
+      { skill: "Kotlin", inline: "ci-kotlin" },
+    ],
   },
   {
     text: ["Launched a subletting marketplace using the Google Maps API."],
@@ -74,6 +103,10 @@ export const timelineData = [
       url: "https://pennlabs.org/products/penn-mobile",
       text: "See More",
     },
+    skills: [
+      { skill: "Android Studio", inline: "ci-androidstudio" },
+      { skill: "Kotlin", inline: "ci-kotlin" },
+    ],
   },
   {
     text: [
@@ -88,6 +121,17 @@ export const timelineData = [
       url: "https://www.switchboardmd.com/",
       text: "See More",
     },
+    skills: [
+      { skill: "React", inline: "ci-react" },
+      { skill: "GraphQL", inline: "ci-graphql" },
+      { skill: "Python", inline: "ci-python" },
+      { skill: "Typescript", inline: "ci-typescript" },
+      { skill: "Javascript", inline: "ci-javascript" },
+      { skill: "Tailwind CSS", inline: "ci-tailwindcss" },
+      { skill: "Amplify", inline: "ci-aws" },
+      { skill: "Lambda", inline: "ci-aws" },
+      { skill: "Cognito", inline: "ci-aws" },
+    ],
   },
   {
     text: [
@@ -102,6 +146,11 @@ export const timelineData = [
       url: "https://www.switchboardmd.com/",
       text: "See More",
     },
+    skills: [
+      { skill: "React", inline: "ci-react" },
+      { skill: "Typescript", inline: "ci-typescript" },
+      { skill: "Tailwind CSS", inline: "ci-tailwindcss" },
+    ],
   },
   {
     text: [
@@ -116,6 +165,10 @@ export const timelineData = [
       url: "https://pennlabs.org/products/penn-mobile",
       text: "See More",
     },
+    skills: [
+      { skill: "Android Studio", inline: "ci-androidstudio" },
+      { skill: "Kotlin", inline: "ci-kotlin" },
+    ],
   },
   {
     text: [
@@ -130,5 +183,12 @@ export const timelineData = [
       url: "https://nemos.mines.edu/",
       text: "See More",
     },
+    skills: [
+      { skill: "Android Studio", inline: "ci-androidstudio" },
+      { skill: "XCode", inline: "ci-xcode" },
+      { skill: "MATLAB", inline: "ci-matlab" },
+      { skill: "Java", inline: "ci-java" },
+      { skill: "Swift", inline: "ci-swift" },
+    ],
   },
 ];

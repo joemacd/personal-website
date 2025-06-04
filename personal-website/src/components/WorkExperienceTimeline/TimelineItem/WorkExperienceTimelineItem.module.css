@@ -3,7 +3,8 @@
   justify-content: flex-end;
   padding-right: 30px;
   position: relative;
-  margin: 10px 0;
+  /* margin: 10px 0; */
+  margin: -20px 0;
   width: 50%;
 }
 .timelineItem:nth-child(odd) {
@@ -22,7 +23,7 @@
   padding: 15px;
   position: relative;
   width: 400px;
-  max-width: 70%;
+  max-width: 100%;
   text-align: right;
 }
 .timelineItemContent::after {
@@ -68,7 +69,7 @@
 .timelineItemContent p {
   font-size: 16px;
   line-height: 24px;
-  margin: 15px 0;
+  margin: 2px 0;
   max-width: 250px;
 }
 .timelineItemContent a {
@@ -91,11 +92,52 @@
   left: -40px;
 }
 
-@media only screen and (max-width: 1023px) {
+/* ─── Technical Skills Box ─── */
+.timelineItemTechSkills {
+  margin-top: 12px;
+  padding-top: 4px;
+  border-top: 1px solid #e0e0e0;
+  width: 100%;
+}
+
+.timelineItemTechSkills ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timelineItemTechSkills ul li {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  gap: 5px;
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin: 4px 4px;
+}
+
+.timelineItemTechSkills .skillLabel {
+  margin-right: 4px;
+  font-size: 16px;
+  color: #555;
+}
+
+.timelineItem:nth-child(odd) .timelineItemTechSkills {
+  text-align: left;
+}
+
+@media only screen and (max-width: 767px) {
+  .timelineItemTechSkills ul {
+    justify-content: center;
+  }
+}
+/* ────────────────────────────── */
+
+/* @media only screen and (max-width: 1023px) {
   .timelineItemContent {
     max-width: 100%;
   }
-}
+} */
 @media only screen and (max-width: 767px) {
   .timelineItemContent,
   .timelineItem:nth-child(odd) .timelineItemContent {

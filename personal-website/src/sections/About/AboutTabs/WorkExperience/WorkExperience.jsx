@@ -4,8 +4,8 @@ import WorkExperienceTimeline from "../../../../components/WorkExperienceTimelin
 export default function WorkExperience() {
   return (
     <section className={styles.container}>
-      <h2 className={styles.header}>Work Experience:</h2>
-      <h2 className={styles.header}>Work Experience Timeline:</h2>
+      {/* <h2 className={styles.header}>Work Experience:</h2>
+      <h2 className={styles.header}>Contribution Timeline:</h2> */}
       <WorkExperienceTimeline />
     </section>
   );

@@ -3,6 +3,9 @@
   flex-direction: column;
   position: relative;
   background: rgba(255, 255, 255, 0.7);
+
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .timelineContainer::after {
   background-color: #111827;
@@ -10,5 +13,5 @@
   position: absolute;
   left: calc(50% - 2px);
   width: 4px;
-  height: 100%;
+  height: calc(100% - 60px);
 }
