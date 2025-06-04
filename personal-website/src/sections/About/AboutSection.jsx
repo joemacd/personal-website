@@ -1,6 +1,6 @@
 import styles from "./AboutSection.module.css";
 
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 
 import Typewriter from "typewriter-effect";
 
@@ -55,6 +55,27 @@ export default function AboutSection() {
   const [selectedPanel, setSelectedPanel] = useState(0);
 
   const [isBubbleHidden, setIsBubbleHidden] = useState(false);
+
+  /*
+   *Handle dog scale according to the width of the screen
+   */
+  const [dogScale, setDogScale] = useState(getScaleForWidth(window.innerWidth));
+  function getScaleForWidth(width) {
+    if (width < 480) {
+      return 1.5;
+    } else if (width < 768) {
+      return 2.0;
+    } else {
+      return 2.5;
+    }
+  }
+  useEffect(() => {
+    function handleResize() {
+      setDogScale(getScaleForWidth(window.innerWidth));
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const panelRefs = [useRef(), useRef(), useRef(), useRef()];
 
@@ -146,7 +167,9 @@ export default function AboutSection() {
                     : styles.dog_sit
                 }
                 style={{
-                  transform: `scaleX(${direction * 2.5}) scaleY(2.5)`,
+                  transform: `scaleX(${
+                    direction * dogScale
+                  }) scaleY(${dogScale})`,
                   ...(dogState === "sit" ? { cursor: "pointer" } : {}),
                 }}
                 onClick={() => handlePetTheDog()}
@@ -161,7 +184,9 @@ export default function AboutSection() {
                   data-direction={direction}
                   style={
                     direction === 1
-                      ? { left: `${MOUTH_X}px` }
+                      ? window.innerWidth < 768
+                        ? { left: `${MOUTH_X - 100}px` }
+                        : { left: `${MOUTH_X}px` }
                       : { left: `${MOUTH_X - 48}px` }
                   }
                 >
