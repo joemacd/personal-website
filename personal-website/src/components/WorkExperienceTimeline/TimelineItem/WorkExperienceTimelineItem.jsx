@@ -23,8 +23,12 @@ export default function WorkExperienceTimelineItem({ data }) {
         {data.skills && data.skills.length > 0 && (
           <div className={styles.timelineItemTechSkills}>
             <ul>
-              {data.skills.map(({ skill, inline }, idx) => (
-                <li key={idx}>
+              {data.skills.map(({ skill, inline, skillLink }, idx) => (
+                <li
+                  key={idx}
+                  onClick={() => skillLink && window.open(skillLink, "_blank")}
+                  style={{ cursor: skillLink ? "pointer" : "default" }}
+                >
                   {inline && (
                     <i className={`ci ${inline} ci-sm ${styles.skillIcon}`}></i>
                   )}

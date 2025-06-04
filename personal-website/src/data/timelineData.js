@@ -11,14 +11,42 @@ export const timelineData = [
       text: "See More",
     },
     skills: [
-      { skill: "Chime SDK", inline: "ci-aws" },
-      { skill: "Python", inline: "ci-python" },
-      { skill: "React", inline: "ci-react" },
-      { skill: "Typescript", inline: "ci-typescript" },
-      { skill: "Javascript", inline: "ci-javascript" },
-      { skill: "Amplify", inline: "ci-aws" },
-      { skill: "Lambda", inline: "ci-aws" },
-      { skill: "Cognito", inline: "ci-aws" },
+      {
+        skill: "Chime SDK",
+        inline: "ci-aws",
+        skillLink: "https://aws.amazon.com/chime/chime-sdk/",
+      },
+      {
+        skill: "Python",
+        inline: "ci-python",
+        skillLink: "https://www.python.org/",
+      },
+      { skill: "React", inline: "ci-react", skillLink: "https://react.dev/" },
+      {
+        skill: "Typescript",
+        inline: "ci-typescript",
+        skillLink: "https://www.typescriptlang.org/",
+      },
+      {
+        skill: "Javascript",
+        inline: "ci-javascript",
+        skillLink: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      },
+      {
+        skill: "Amplify",
+        inline: "ci-aws",
+        skillLink: "https://aws.amazon.com/amplify/",
+      },
+      {
+        skill: "Lambda",
+        inline: "ci-aws",
+        skillLink: "https://aws.amazon.com/lambda/",
+      },
+      {
+        skill: "Cognito",
+        inline: "ci-aws",
+        skillLink: "https://aws.amazon.com/cognito/",
+      },
     ],
   },
   {
@@ -33,10 +61,22 @@ export const timelineData = [
       text: "See More",
     },
     skills: [
-      { skill: "Asterisk" },
-      { skill: "EC2", inline: "ci-ec2" },
-      { skill: "Linux", inline: "ci-linux" },
-      { skill: "VoIP" },
+      { skill: "Asterisk", skillLink: "https://www.asterisk.org/" },
+      {
+        skill: "EC2",
+        inline: "ci-ec2",
+        skillLink: "https://aws.amazon.com/ec2/",
+      },
+      {
+        skill: "Linux",
+        inline: "ci-linux",
+        skillLink: "https://www.linux.org/",
+      },
+      {
+        skill: "VoIP",
+        skillLink:
+          "https://www.fcc.gov/general/voice-over-internet-protocol-voip#:~:text=Voice%20over%20Internet%20Protocol%20(VoIP)%2C%20is%20a%20technology%20that,(or%20analog)%20phone%20line.",
+      },
     ],
   },
   {
@@ -54,7 +94,11 @@ export const timelineData = [
     },
     skills: [
       { skill: "Data Structures" },
-      { skill: "Java", inline: "ci-java" },
+      {
+        skill: "Java",
+        inline: "ci-java",
+        skillLink: "https://www.java.com/en/",
+      },
       { skill: "Teaching", inline: "ci-scholar" },
     ],
   },
@@ -72,8 +116,16 @@ export const timelineData = [
       text: "See More",
     },
     skills: [
-      { skill: "OpenCV", inline: "ci-opencv" },
-      { skill: "Python", inline: "ci-python" },
+      {
+        skill: "OpenCV",
+        inline: "ci-opencv",
+        skillLink: "https://opencv.org/",
+      },
+      {
+        skill: "Python",
+        inline: "ci-python",
+        skillLink: "https://www.python.org/",
+      },
     ],
   },
   {
@@ -88,8 +140,17 @@ export const timelineData = [
       text: "See More",
     },
     skills: [
-      { skill: "Android Studio", inline: "ci-androidstudio" },
-      { skill: "Kotlin", inline: "ci-kotlin" },
+      {
+        skill: "Android Studio",
+        inline: "ci-androidstudio",
+        skillLink:
+          "https://developer.android.com/studio?_gl=1*mtik*_up*MQ..&gclid=CjwKCAjw3f_BBhAPEiwAaA3K5H-KNxG96YtdGuo7wbrqczljmzRuqHhsMxWdadLJom3asHO6hS53oRoCo0EQAvD_BwE&gclsrc=aw.ds&gbraid=0AAAAAC-IOZluaKqB6_LHoqYKXYAd00Wgs",
+      },
+      {
+        skill: "Kotlin",
+        inline: "ci-kotlin",
+        skillLink: "https://kotlinlang.org/",
+      },
     ],
   },
   {
@@ -104,8 +165,17 @@ export const timelineData = [
       text: "See More",
     },
     skills: [
-      { skill: "Android Studio", inline: "ci-androidstudio" },
-      { skill: "Kotlin", inline: "ci-kotlin" },
+      {
+        skill: "Android Studio",
+        inline: "ci-androidstudio",
+        skillLink:
+          "https://developer.android.com/studio?_gl=1*mtik*_up*MQ..&gclid=CjwKCAjw3f_BBhAPEiwAaA3K5H-KNxG96YtdGuo7wbrqczljmzRuqHhsMxWdadLJom3asHO6hS53oRoCo0EQAvD_BwE&gclsrc=aw.ds&gbraid=0AAAAAC-IOZluaKqB6_LHoqYKXYAd00Wgs",
+      },
+      {
+        skill: "Kotlin",
+        inline: "ci-kotlin",
+        skillLink: "https://kotlinlang.org/",
+      },
     ],
   },
   {
@@ -122,15 +192,47 @@ export const timelineData = [
       text: "See More",
     },
     skills: [
-      { skill: "React", inline: "ci-react" },
-      { skill: "GraphQL", inline: "ci-graphql" },
-      { skill: "Python", inline: "ci-python" },
-      { skill: "Typescript", inline: "ci-typescript" },
-      { skill: "Javascript", inline: "ci-javascript" },
-      { skill: "Tailwind CSS", inline: "ci-tailwindcss" },
-      { skill: "Amplify", inline: "ci-aws" },
-      { skill: "Lambda", inline: "ci-aws" },
-      { skill: "Cognito", inline: "ci-aws" },
+      { skill: "React", inline: "ci-react", skillLink: "https://react.dev/" },
+      {
+        skill: "GraphQL",
+        inline: "ci-graphql",
+        skillLink: "https://graphql.org/",
+      },
+      {
+        skill: "Python",
+        inline: "ci-python",
+        skillLink: "https://www.python.org/",
+      },
+      {
+        skill: "Typescript",
+        inline: "ci-typescript",
+        skillLink: "https://www.typescriptlang.org/",
+      },
+      {
+        skill: "Javascript",
+        inline: "ci-javascript",
+        skillLink: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      },
+      {
+        skill: "Tailwind CSS",
+        inline: "ci-tailwindcss",
+        skillLink: "https://tailwindcss.com/",
+      },
+      {
+        skill: "Amplify",
+        inline: "ci-aws",
+        skillLink: "https://aws.amazon.com/amplify/",
+      },
+      {
+        skill: "Lambda",
+        inline: "ci-aws",
+        skillLink: "https://aws.amazon.com/lambda/",
+      },
+      {
+        skill: "Cognito",
+        inline: "ci-aws",
+        skillLink: "https://aws.amazon.com/cognito/",
+      },
     ],
   },
   {
@@ -147,9 +249,17 @@ export const timelineData = [
       text: "See More",
     },
     skills: [
-      { skill: "React", inline: "ci-react" },
-      { skill: "Typescript", inline: "ci-typescript" },
-      { skill: "Tailwind CSS", inline: "ci-tailwindcss" },
+      { skill: "React", inline: "ci-react", skillLink: "https://react.dev/" },
+      {
+        skill: "Typescript",
+        inline: "ci-typescript",
+        skillLink: "https://www.typescriptlang.org/",
+      },
+      {
+        skill: "Tailwind CSS",
+        inline: "ci-tailwindcss",
+        skillLink: "https://tailwindcss.com/",
+      },
     ],
   },
   {
@@ -166,8 +276,17 @@ export const timelineData = [
       text: "See More",
     },
     skills: [
-      { skill: "Android Studio", inline: "ci-androidstudio" },
-      { skill: "Kotlin", inline: "ci-kotlin" },
+      {
+        skill: "Android Studio",
+        inline: "ci-androidstudio",
+        skillLink:
+          "https://developer.android.com/studio?_gl=1*mtik*_up*MQ..&gclid=CjwKCAjw3f_BBhAPEiwAaA3K5H-KNxG96YtdGuo7wbrqczljmzRuqHhsMxWdadLJom3asHO6hS53oRoCo0EQAvD_BwE&gclsrc=aw.ds&gbraid=0AAAAAC-IOZluaKqB6_LHoqYKXYAd00Wgs",
+      },
+      {
+        skill: "Kotlin",
+        inline: "ci-kotlin",
+        skillLink: "https://kotlinlang.org/",
+      },
     ],
   },
   {
@@ -184,11 +303,32 @@ export const timelineData = [
       text: "See More",
     },
     skills: [
-      { skill: "Android Studio", inline: "ci-androidstudio" },
-      { skill: "XCode", inline: "ci-xcode" },
-      { skill: "MATLAB", inline: "ci-matlab" },
-      { skill: "Java", inline: "ci-java" },
-      { skill: "Swift", inline: "ci-swift" },
+      {
+        skill: "Android Studio",
+        inline: "ci-androidstudio",
+        skillLink:
+          "https://developer.android.com/studio?_gl=1*mtik*_up*MQ..&gclid=CjwKCAjw3f_BBhAPEiwAaA3K5H-KNxG96YtdGuo7wbrqczljmzRuqHhsMxWdadLJom3asHO6hS53oRoCo0EQAvD_BwE&gclsrc=aw.ds&gbraid=0AAAAAC-IOZluaKqB6_LHoqYKXYAd00Wgs",
+      },
+      {
+        skill: "XCode",
+        inline: "ci-xcode",
+        skillLink: "https://developer.apple.com/xcode/",
+      },
+      {
+        skill: "MATLAB",
+        inline: "ci-matlab",
+        skillLink: "https://www.mathworks.com/products/matlab.html",
+      },
+      {
+        skill: "Java",
+        inline: "ci-java",
+        skillLink: "https://www.java.com/en/",
+      },
+      {
+        skill: "Swift",
+        inline: "ci-swift",
+        skillLink: "https://www.swift.org/",
+      },
     ],
   },
 ];
