@@ -44,7 +44,7 @@ export default function AboutSection() {
     },
     {
       title: "*Bark Woof*",
-      text: "Apart from walking his dog, Joe enjoys a variety of topics including: Fullstack Development, CS theory, ML & Embedded Systems, and so much more.",
+      text: "Apart from walking his dog, Joe enjoys a variety of things including: Fullstack Development, CS theory, ML & Embedded Systems, and so much more.",
     },
   ];
 
