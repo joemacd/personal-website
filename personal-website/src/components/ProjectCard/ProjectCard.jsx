@@ -6,11 +6,13 @@ export default function ProjectCard({
   imageUrl,
   repoUrl,
   demoUrl,
+  starred,
   onClick,
 }) {
   return (
     <div
       className={styles.card}
+      starred={starred ? "true" : undefined}
       style={{ backgroundImage: `url(${imageUrl})` }}
       onClick={onClick}
       role="button"
@@ -19,6 +21,7 @@ export default function ProjectCard({
         if (e.key === "Enter") onClick();
       }}
     >
+      {starred && <div className={styles.star}>★</div>}
       <div className={styles.overlay}>
         <h1 className={styles.title}>{title}</h1>
         <div className={styles.links}>
@@ -60,5 +63,6 @@ ProjectCard.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   repoUrl: PropTypes.string,
   demoUrl: PropTypes.string,
+  starred: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
 };

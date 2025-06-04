@@ -13,6 +13,10 @@
   transition: transform 200ms ease, box-shadow 200ms ease;
 }
 
+.card[starred="true"] {
+  border: 4px gold solid;
+}
+
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
@@ -68,4 +72,15 @@
 .link:hover {
   background: rgba(255, 255, 255, 0.35);
   transform: translateY(-2px);
+}
+
+.star {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.5rem;
+  color: gold;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  z-index: 2;
 }

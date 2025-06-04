@@ -7,11 +7,13 @@ export default function ProjectDescription({
   imageUrl,
   repoUrl,
   demoUrl,
+  starred,
   onClick,
 }) {
   return (
     <div
       className={styles.card}
+      starred={starred ? "true" : undefined}
       style={{ backgroundImage: `url(${imageUrl})` }}
       onClick={onClick}
       role="button"
@@ -62,5 +64,6 @@ ProjectDescription.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   repoUrl: PropTypes.string,
   demoUrl: PropTypes.string,
+  starred: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
 };

@@ -7,6 +7,7 @@ export const projects = [
       imageUrl: "/images/testytestytest.png",
       repoUrl: "https://github.com/",
       demoUrl: "https://google.com",
+      starred: true,
     },
     descriptionCard: {
       title: "Test1",
@@ -14,12 +15,14 @@ export const projects = [
       date: "Summer 2024",
       organization: "hey",
       technologies: ["react", "ts", "yo"],
+      starred: true,
     },
     skillsCard: {
       skills: [
         { name: "git", inline: "ci-git" },
         { name: "C", inline: "ci-c" },
       ],
+      starred: true,
     },
   },
   {
@@ -28,15 +31,18 @@ export const projects = [
       imageUrl: "/images/testytestytest.png",
       repoUrl: "https://github.com/",
       demoUrl: "https://google.com",
+      starred: false,
     },
     descriptionCard: {
       description: "TestDesc2",
+      starred: false,
     },
     skillsCard: {
       skills: [
         { name: "git", inline: "ci-git" },
         { name: "C", inline: "ci-c" },
       ],
+      starred: false,
     },
   },
   {
@@ -44,15 +50,18 @@ export const projects = [
       title: "Test3",
       imageUrl: "/images/testytestytest.png",
       repoUrl: "https://github.com/",
+      starred: true,
     },
     descriptionCard: {
       description: "TestDesc3",
+      starred: true,
     },
     skillsCard: {
       skills: [
         { name: "git", inline: "ci-git" },
         { name: "C", inline: "ci-c" },
       ],
+      starred: true,
     },
   },
   {
@@ -60,15 +69,18 @@ export const projects = [
       title: "Test4",
       imageUrl: "/images/testytestytest.png",
       demoUrl: "https://google.com",
+      starred: false,
     },
     descriptionCard: {
       description: "TestDesc4",
+      starred: false,
     },
     skillsCard: {
       skills: [
         { name: "git", inline: "ci-git" },
         { name: "C", inline: "ci-c" },
       ],
+      starred: false,
     },
   },
 ];

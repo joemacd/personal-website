@@ -1,9 +1,14 @@
 import PropTypes from "prop-types";
 import styles from "./ProjectSkills.module.css";
 
-export default function ProjectSkills({ skills }) {
+export default function ProjectSkills({ skills, starred }) {
   return (
-    <div className={styles.card} role="button" tabIndex={0}>
+    <div
+      className={styles.card}
+      starred={starred ? "true" : undefined}
+      role="button"
+      tabIndex={0}
+    >
       {skills.map((skill) => (
         <i className={`ci ${skill.inline} ci-sm`}></i>
       ))}
@@ -17,5 +22,6 @@ ProjectSkills.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   repoUrl: PropTypes.string,
   demoUrl: PropTypes.string,
+  starred: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
 };
