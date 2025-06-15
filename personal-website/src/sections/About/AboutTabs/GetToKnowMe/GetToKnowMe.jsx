@@ -57,14 +57,13 @@ export default function GetToKnowMe() {
           className={styles.personalImageTag}
         />
       </div> */}
-      <div className={styles.intro}>
-        <a
-          href="/resume/MacDougall_Resume.pdf"
-          download
-          className={styles.resumeLink}
-        >
-          Download Resume
-        </a>
+      <div
+        className={styles.intro}
+        style={{
+          backgroundImage: `url(/images/river_pic.jpg)`,
+          backgroundSize: "cover",
+        }}
+      >
         <div className={styles.nameRow}>
           <h1 className={styles.greeting}>👋 Hi, I’m&nbsp;</h1>
           <h1 className={styles.highlight}>Joe</h1>
@@ -109,13 +108,26 @@ export default function GetToKnowMe() {
           </div>
         </div> */}
         {/* Personal Description */}
-        <div className={styles.descSection}>
+        <div
+          className={styles.descSection}
+          style={{
+            backgroundImage: `url(/images/starry_sky.jpg)`,
+            backgroundSize: "cover",
+          }}
+        >
           <h1 className={styles.descText}>I build&nbsp;</h1>
           <h1 className={styles.descTextHighlight}>websites,</h1>
           <h1 className={styles.descText}>&nbsp;craft&nbsp;</h1>
           <h1 className={styles.descTextHighlight}>mobile apps,</h1>
           <h1 className={styles.descText}>&nbsp;and so much more!</h1>
         </div>
+        <a
+          href="/resume/MacDougall_Resume.pdf"
+          download
+          className={styles.resumeLink}
+        >
+          Download Resume
+        </a>
       </div>
     </div>
   );
