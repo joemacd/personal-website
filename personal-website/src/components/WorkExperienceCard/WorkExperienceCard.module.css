@@ -1,0 +1,96 @@
+.card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.role {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.company {
+  font-size: 1rem;
+  color: #555;
+}
+
+.meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: #777;
+}
+
+.summary {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 0;
+}
+
+.bullets {
+  list-style: disc inside;
+  padding-left: 1rem;
+  margin: 0;
+  color: #444;
+}
+
+.link {
+  align-self: flex-start;
+  margin-top: auto;
+  color: #8ee0f2;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* skills */
+.skillsSection {
+  margin-top: 1rem;
+}
+
+.skillList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skillItem {
+  background: #f0f0f0;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.skillLabel {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 1rem;
+  }
+}

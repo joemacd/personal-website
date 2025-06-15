@@ -19,3 +19,41 @@
   border-radius: 10px;
   /* border: #8ee0f2 5px solid; */
 }
+
+.tabs {
+  display: flex;
+  margin-bottom: 0.5rem;
+  justify-content: space-evenly;
+  background: #111827;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Tab buttons */
+.tab {
+  width: 50%;
+  background: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+  border-bottom: 5px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.tab:hover {
+  color: #fff;
+}
+
+.activeTab {
+  color: #fff;
+  border-color: #8ee0f2;
+}
+
+/* mobile phones */
+@media (max-width: 480px) {
+  .tab {
+    font-size: 1rem;
+  }
+}
