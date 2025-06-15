@@ -180,6 +180,7 @@ a:focus-visible .icon {
 
   .container {
     flex-direction: column;
+    gap: 1rem;
   }
 
   .socialList {

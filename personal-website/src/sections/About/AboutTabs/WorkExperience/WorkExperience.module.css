@@ -1,5 +1,8 @@
 .container {
   margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding-bottom: 10px;
 }
 
 .header {
@@ -14,5 +17,5 @@
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
   border-radius: 10px;
-  border: #8ee0f2 5px solid;
+  /* border: #8ee0f2 5px solid; */
 }

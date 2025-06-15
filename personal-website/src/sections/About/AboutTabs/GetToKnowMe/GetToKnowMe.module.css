@@ -1,0 +1,241 @@
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.rightColumn {
+  min-height: 425px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  /* justify-content: space-between; */
+  justify-content: center;
+}
+
+.intro {
+  min-height: 425px;
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 2rem;
+
+  position: relative;
+}
+
+.avatar {
+  width: clamp(175px, 25vw, 250px);
+  height: clamp(175px, 25vw, 250px);
+  border-radius: 50%;
+  object-fit: cover;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.nameRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  gap: 0.25rem;
+}
+
+.greeting {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0;
+}
+
+.highlight {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0;
+  color: #8ee0f2;
+  text-decoration: underline;
+}
+
+.resumeLink {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  background: #8ee0f2;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px; /* pill */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: background 0.2s;
+}
+
+.resumeLink:hover {
+  background: #6cbecf;
+}
+
+/* ---------- PROJECTS SECTION ---------- */
+/* 
+.projectsSection {
+  background: #ffffff;
+  padding: 10px;
+  width: 100%;
+
+  border: #111827 5px solid;
+  border-radius: 10px;
+}
+
+.projectsSection h1 {
+  font-size: 2rem;
+  padding: 0.3rem;
+  margin-bottom: 1rem;
+  margin-top: 0rem;
+  background: #111827;
+  border-radius: 10px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.projectCard {
+  background: rgba(142, 224, 242, 0.2);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+  text-decoration: none;
+}
+
+.projectCard:hover {
+  transform: translateY(-4px);
+}
+
+.projectImage {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+}
+
+.projectInfo {
+  padding: 0.75rem;
+}
+
+.projectTitle {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #111827;
+  font-size: 1.2rem;
+}
+
+.projectDesc {
+  font-size: 0.875rem;
+  color: #555;
+
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.projectCard:hover .projectDesc {
+  opacity: 1;
+  max-height: 3rem;
+} */
+
+/* ---------- Description Section ---------- */
+.descSection {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  /* margin: 2rem 0; */
+  text-align: center;
+  background: #111827;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.descText {
+  color: #ffffff;
+  font-size: 35px;
+  margin: 0;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+.descTextHighlight {
+  font-size: 40px;
+  margin: 0;
+  color: #8ee0f2;
+  text-decoration: underline;
+  text-decoration-color: #ffffff;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+/*---------- Responsive Design ----------*/
+
+/* less-than-large laptop */
+@media (max-width: 1024px) {
+  .descText {
+    font-size: 30px;
+    padding-bottom: 0rem;
+  }
+
+  .descTextHighlight {
+    font-size: 35px;
+    padding-bottom: 0rem;
+  }
+}
+
+/* tablet / small-desktop */
+@media (max-width: 768px) {
+  .intro {
+    padding: 1rem;
+    padding-top: 2rem;
+    width: 100%;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .rightColumn {
+    width: 100%;
+    min-height: 300px;
+  }
+  .intro {
+    min-height: 300px;
+  }
+}
+
+/* mobile phones */
+@media (max-width: 480px) {
+  .descText {
+    font-size: 25px;
+  }
+
+  .descTextHighlight {
+    font-size: 30px;
+  }
+  .intro {
+    padding: 0.5rem;
+    padding-top: 2rem;
+  }
+}
