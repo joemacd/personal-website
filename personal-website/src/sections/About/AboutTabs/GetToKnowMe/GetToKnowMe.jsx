@@ -112,10 +112,8 @@ export default function GetToKnowMe() {
         <div className={styles.descSection}>
           <h1 className={styles.descText}>I build&nbsp;</h1>
           <h1 className={styles.descTextHighlight}>websites,</h1>
-          <h1 className={styles.descText}>&nbsp;develop&nbsp;</h1>
+          <h1 className={styles.descText}>&nbsp;craft&nbsp;</h1>
           <h1 className={styles.descTextHighlight}>mobile apps,</h1>
-          <h1 className={styles.descText}>&nbsp;teach&nbsp;</h1>
-          <h1 className={styles.descTextHighlight}>CS theory,</h1>
           <h1 className={styles.descText}>&nbsp;and so much more!</h1>
         </div>
       </div>
