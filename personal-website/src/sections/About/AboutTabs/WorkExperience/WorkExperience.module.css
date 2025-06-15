@@ -36,6 +36,7 @@
   border: none;
   padding: 0.5rem 1rem;
   font-size: 2rem;
+  font-weight: 600;
   cursor: pointer;
   color: #fff;
   border-bottom: 5px solid transparent;
