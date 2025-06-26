@@ -7,7 +7,7 @@
 
 .logo {
   margin: 0;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
 }
 
 .container {
@@ -28,7 +28,7 @@
 /* Site Nav Bar */
 .nav {
   display: flex;
-  gap: 2.25rem; /* uniform spacing between buttons */
+  gap: 4rem; /* uniform spacing between buttons */
 }
 
 .nav button {
@@ -68,7 +68,7 @@
   list-style: none;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  padding: 0.25rem 0rem;
+  padding: 0.2rem 0rem;
 
   display: flex;
   justify-content: space-evenly;
@@ -79,8 +79,8 @@
 }
 
 .icon {
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 1.6rem;
+  height: 1.6rem;
   color: #111827;
   transition: transform 180ms ease, filter 180ms ease, color 180ms ease;
 }
@@ -110,7 +110,7 @@ a:focus-visible .icon {
 }
 
 .locationCell {
-  padding: 0.25rem 0.75rem;
+  padding: 0.1rem 0.75rem;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -124,26 +124,26 @@ a:focus-visible .icon {
 }
 
 .locationIcon {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 0.8rem;
+  height: 0.8rem;
   color: #ea4335; /* using the same as "gmail red" for color consistency */
 }
 
 .locationText {
   display: inline-flex;
   align-items: baseline;
-  gap: 0.2rem;
+  gap: 0.1rem;
 }
 
 .city {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: #111827;
   letter-spacing: 0.5px;
 }
 
 .state {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 400;
   color: #111827;
   opacity: 0.6;
@@ -154,12 +154,12 @@ a:focus-visible .icon {
 /* less-than-large laptop */
 @media (max-width: 1024px) {
   .nav {
-    flex-direction: column;
-    gap: 1rem;
+    /* flex-direction: column; */
+    gap: 1.5rem;
   }
 
   .nav button {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   .container {
@@ -170,29 +170,12 @@ a:focus-visible .icon {
 /* tablet / small-desktop */
 @media (max-width: 768px) {
   .logo {
-    font-size: 3.2rem;
+    font-size: 2rem;
   }
 
   .nav {
     flex-direction: row;
     gap: 2.25rem;
-  }
-
-  .container {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .socialList {
-    gap: 0.5rem;
-    margin-top: 0.7rem;
-  }
-}
-
-/* mobile phones */
-@media (max-width: 480px) {
-  .logo {
-    font-size: 2rem;
   }
 
   .locationsList {
@@ -216,6 +199,7 @@ a:focus-visible .icon {
   }
 
   .container {
+    flex-direction: column;
     gap: 0rem;
   }
 }

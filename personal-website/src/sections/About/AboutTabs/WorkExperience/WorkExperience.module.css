@@ -2,7 +2,10 @@
   margin: 0 auto;
   background-color: #fff;
   border-radius: 10px;
+  margin-top: 10px;
   padding-bottom: 10px;
+
+  margin-bottom: 250px;
 }
 
 .header {

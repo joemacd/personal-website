@@ -1,4 +1,10 @@
 /* ABOUT */
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+  height: 100%;              /* 100% of the .content area under header */
+  background: #8ee0f2;
+}
 
 .about {
   position: relative;
@@ -179,15 +185,17 @@
 
 /* POPUP Component */
 .popupContainer {
+  flex: 1;
+  overflow: auto;
   position: relative;
   /* padding: 1rem 1rem 1rem; */
   /* max-width: 1160px; */
-  width: 98%;
+  width: 100%;
   margin: 0 auto;
   /* border-radius: 2rem; */
   /* border: 3px solid #111827; */
   /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06); */
-  margin-bottom: 300px;
+  /* margin-bottom: 300px; */
 
   /* background-color: rgba(255, 255, 255, 1); */
 }

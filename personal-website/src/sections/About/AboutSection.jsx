@@ -126,14 +126,7 @@ export default function AboutSection() {
   const bubbleLeft = direction === 1 ? mouthOffset : mouthOffset - 48 * 3;
 
   return (
-    <div
-      style={{
-        background: "#8ee0f2",
-        minHeight: "85vh",
-        paddingBottom: "10px",
-        paddingTop: "10px",
-      }}
-    >
+    <div className = {styles.aboutSection}>
       <div className={styles.popupContainer}>
         {selectedPanel === 0 && <GetToKnowMe />}
         {selectedPanel === 1 && <WorkExperience />}
