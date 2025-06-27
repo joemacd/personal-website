@@ -1,5 +1,5 @@
 import styles from "./ContactSection.module.css";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { TextField } from "@mui/material";
 import { Button } from "@mui/material";
 import InputAdornment from "@mui/material/InputAdornment";
@@ -36,7 +36,7 @@ export default function ContactSection() {
       <div className={styles.textInputWrapper}>
         <TextField
           name="name"
-          id="outlined-basic"
+          id="outlined-basic-name"
           className="form-control"
           label="Name"
           fullWidth
@@ -54,7 +54,7 @@ export default function ContactSection() {
         />
 
         <TextField
-          id="outlined-basic"
+          id="outlined-basic-subject"
           className="form-control"
           label="Subject"
           fullWidth
