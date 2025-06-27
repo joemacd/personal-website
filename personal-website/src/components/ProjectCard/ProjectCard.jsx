@@ -1,54 +1,68 @@
+import {useState} from "react";
 import PropTypes from "prop-types";
+import { FaGithub, FaVideo } from "react-icons/fa"; // or react-icons/fa
 import styles from "./ProjectCard.module.css";
 
 export default function ProjectCard({
   title,
+  descriptionPreview,
+  descriptionReadMore,
   imageUrl,
   repoUrl,
   demoUrl,
   starred,
   onClick,
 }) {
+  const stop = (e) => e.stopPropagation();
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <div
-      className={styles.card}
-      starred={starred ? "true" : undefined}
-      style={{ backgroundImage: `url(${imageUrl})` }}
+      className={`${styles.card} ${starred ? styles.starred : ""}`}
       onClick={onClick}
       role="button"
       tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === "Enter") onClick();
-      }}
+      onKeyDown={(e) => e.key === "Enter" && onClick()}
     >
       {starred && <div className={styles.star}>★</div>}
-      <div className={styles.overlay}>
-        <h1 className={styles.title}>{title}</h1>
-        <div className={styles.links}>
-          {repoUrl && (
-            <a
-              href={repoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.link}
+
+      <div
+        className={styles.image}
+        style={{ backgroundImage: `url(${imageUrl})` }}
+      />
+
+      <div className={styles.content}>
+        <h3 className={styles.title}>{title}</h3>
+
+        <p className={styles.description}>
+          {descriptionPreview}
+          {descriptionReadMore && expanded && (
+            <span>
+              {" "}{descriptionReadMore}
+            </span>
+          )}
+          {descriptionReadMore && (
+            <button
+              className={styles.readMore}
               onClick={(e) => {
-                e.stopPropagation(); //stops modal from popping up
+                stop(e);
+                setExpanded((v) => !v);
               }}
             >
-              View Code
+              {expanded ? "Show less" : "Read more"}
+            </button>
+          )}
+        </p>
+
+        <div className={styles.icons}>
+          {repoUrl && (
+            <a href={repoUrl} target="_blank" rel="noopener noreferrer" onClick={stop}>
+              <FaGithub />
             </a>
           )}
           {demoUrl && (
-            <a
-              href={demoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.link}
-              onClick={(e) => {
-                e.stopPropagation(); //stops modal from popping up
-              }}
-            >
-              Live Demo
+            <a href={demoUrl} target="_blank" rel="noopener noreferrer" onClick={stop}>
+              <FaVideo />
             </a>
           )}
         </div>
@@ -58,11 +72,12 @@ export default function ProjectCard({
 }
 
 ProjectCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  imageUrl: PropTypes.string.isRequired,
-  repoUrl: PropTypes.string,
-  demoUrl: PropTypes.string,
-  starred: PropTypes.bool,
-  onClick: PropTypes.func.isRequired,
+  title:       PropTypes.string.isRequired,
+  descriptionPreview: PropTypes.string.isRequired,
+  descriptionReadMore: PropTypes.string,
+  imageUrl:    PropTypes.string.isRequired,
+  repoUrl:     PropTypes.string,
+  demoUrl:     PropTypes.string,
+  starred:     PropTypes.bool,
+  onClick:     PropTypes.func.isRequired,
 };

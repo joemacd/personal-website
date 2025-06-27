@@ -1,7 +1,7 @@
 :root {
   --accent:       #0099f5;
   --text-light:   #f9fafb;
-  --bg-gradient:  linear-gradient(
+  --bg-gradient-get-to-know-me:  linear-gradient(
     135deg,
     #8ee0f2 0%,
     #8ee0f2 10%,
@@ -18,7 +18,7 @@
 .hero {
   width: 100%;
   height: 100%;
-  background: var(--bg-gradient);
+  background: var(--bg-gradient-get-to-know-me);
   display: flex;
   align-items: flex-start;
   justify-content: center;
