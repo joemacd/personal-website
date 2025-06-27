@@ -8,7 +8,6 @@ export default function GetToKnowMe() {
     "/images/avatars/joe_baby_2.png",
     "/images/avatars/joe_baby_3.png",
     "/images/avatars/joe_baby_4.png",
-    "/images/avatars/joe_baby_5.png",
   ];
   const [idx, setIdx] = useState(0);
 

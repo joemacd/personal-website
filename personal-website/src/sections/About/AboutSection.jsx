@@ -91,6 +91,15 @@ export default function AboutSection() {
     }, 1200);
   };
 
+  //scroll to top of panel
+  const popupRef = useRef(null);
+  useEffect(() => {
+    if (popupRef.current) {
+      popupRef.current.scrollTop = 0;
+    }
+  }, [selectedPanel]);
+
+
   const handlePanelClick = (index) => {
     const panel = panelRefs[index].current;
     if (!panel) return;
@@ -127,7 +136,7 @@ export default function AboutSection() {
 
   return (
     <div className = {styles.aboutSection}>
-      <div className={styles.popupContainer}>
+      <div className={styles.popupContainer} ref={popupRef}>
         {selectedPanel === 0 && <GetToKnowMe />}
         {selectedPanel === 1 && <WorkExperience />}
         {selectedPanel === 2 && <Education />}
