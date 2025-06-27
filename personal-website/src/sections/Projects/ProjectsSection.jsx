@@ -15,12 +15,14 @@ export default function ProjectsSection() {
   return (
     <section id="projects" className={styles.section}>
       <div className={styles.columns}>
-        {projects.map((p) => (
-          <ProjectCard
+        {projects.map((p, idx) => (
+          <div
             key={p.titleCard.title}
-            {...p.titleCard}
-            onClick={() => handleCardClick(p)}
-          />
+            className={styles.fadeUp}
+            style={{ animationDelay: `${idx * 0.1}s` }}
+          >
+            <ProjectCard {...p.titleCard} onClick={() => handleCardClick(p)} />
+          </div>
         ))}
       </div>
     </section>
