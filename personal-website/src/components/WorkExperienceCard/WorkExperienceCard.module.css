@@ -7,6 +7,11 @@
   flex-direction: column;
   gap: 0.75rem;
   transition: transform 0.2s;
+
+  /* animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease-out forwards;
 }
 
 .card:hover {
@@ -14,6 +19,30 @@
 }
 
 .cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.logoBox {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.headerText {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
@@ -87,6 +116,13 @@
 
 .skillLabel {
   color: #333;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 768px) {

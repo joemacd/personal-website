@@ -1,3 +1,9 @@
+:root {
+  --dog-image-sit-url: url("/public/Dog Sprites/Dog 1 - Beagle/Sit/dog_1_sit.png");
+  --dog-image-wag-url: url("/public/Dog Sprites/Dog 1 - Beagle/Wag/dog_1_wag_sheet.png");
+  --dog-image-walk-url: url("/public/Dog Sprites/Dog 1 - Beagle/Walk/dog_1_walk_sheet.png");
+}
+
 /* ABOUT */
 .aboutSection {
   display: flex;
@@ -57,7 +63,7 @@
   width: 48px;
   height: 32px;
 
-  background-image: url("/public/Dog Sprites/Dog 1 - Beagle/Sit/dog_1_sit.png");
+  background-image: var(--dog-image-sit-url);
   background-repeat: no-repeat;
 
   background-size: 48px 32px;
@@ -71,7 +77,7 @@
   width: 48px;
   height: 32px;
 
-  background-image: url("/public/Dog Sprites/Dog 1 - Beagle/Walk/dog_1_walk_sheet.png");
+  background-image: var(--dog-image-walk-url);
   background-repeat: no-repeat;
 
   background-size: 384px 32px;
@@ -86,7 +92,7 @@
   width: 48px;
   height: 32px;
 
-  background-image: url("/public/Dog Sprites/Dog 1 - Beagle/Wag/dog_1_wag_sheet.png");
+  background-image: var(--dog-image-wag-url);
   background-repeat: no-repeat;
 
   background-size: 384px 32px;

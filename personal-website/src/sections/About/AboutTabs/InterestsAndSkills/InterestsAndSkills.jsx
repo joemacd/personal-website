@@ -87,12 +87,17 @@ const skillsData = [
 export default function InterestsAndSkills() {
   return (
     <div className={styles.container}>
-      {skillsData.map(({ category, skills }) => (
-        <section key={category} className={styles.section}>
-          <h2 className={styles.heading}>{category}</h2>
+     {skillsData.map(({ category, skills }, catIdx) => (
+        <section key={category} className={`${styles.section} ${styles.fadeUp}`}
+          style={{ animationDelay: `${catIdx * 0.2}s` }}>
+          <h2 className={`${styles.heading} ${styles.fadeUp}`}
+            style={{ animationDelay: `${catIdx * 0.2 + 0.1}s` }}>{category}</h2>
           <div className={styles.grid}>
-            {skills.map(({ name, Icon }) => (
-              <div key={name} className={styles.card}>
+            {skills.map(({ name, Icon }, skillIdx) => (
+              <div key={name} className={`${styles.card} ${styles.fadeUp}`}
+                style={{
+                  animationDelay: `${catIdx * 0.2 + 0.2 + skillIdx * 0.05}s`,
+                }}>
                 <Icon className={styles.icon} />
                 <span className={styles.label}>{name}</span>
               </div>

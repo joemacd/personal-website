@@ -9,8 +9,12 @@ export default function WorkExperienceTimeline() {
       {timelineData.length > 0 && (
         <div className={styles.timelineContainer}>
           {timelineData.map((data, idx) => (
-            <WorkExperienceTimelineItem data={data} key={idx} />
-          ))}
+           <WorkExperienceTimelineItem
+             data={data}
+            key={idx}
+             idx={idx}
+           />
+         ))}
         </div>
       )}
     </>

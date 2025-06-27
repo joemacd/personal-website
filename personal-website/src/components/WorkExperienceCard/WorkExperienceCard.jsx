@@ -1,14 +1,23 @@
 import styles from "./WorkExperienceCard.module.css";
 
 export default function WorkExperienceCard({ position }) {
-  const { company, role, period, location, summary, bullets, skills, link } =
+  const { company, logo, role, period, location, summary, bullets, skills, link } =
     position;
 
   return (
     <div className={styles.card}>
       <div className={styles.cardHeader}>
-        <div className={styles.company}>{company}</div>
-        <div className={styles.role}>{role}</div>
+        <div className={styles.logoBox}>
+            <img
+              src={logo}
+              alt={`${company} logo`}
+              className={styles.logoImage}
+            />
+          </div>
+        <div className={styles.headerText}>
+          <div className={styles.company}>{company}</div>
+          <div className={styles.role}>{role}</div>
+        </div>
       </div>
 
       <div className={styles.meta}>

@@ -1,9 +1,15 @@
 import styles from "./WorkExperienceTimelineItem.module.css";
 
-export default function WorkExperienceTimelineItem({ data }) {
+export default function WorkExperienceTimelineItem({ data, idx }) {
+  const isLeft = idx % 2 === 0;
+  const slideClass = isLeft
+    ? styles.fadeInLeft
+    : styles.fadeInRight;
+
   return (
     <div className={styles.timelineItem}>
-      <div className={styles.timelineItemContent}>
+      <div className={`${styles.timelineItemContent} ${slideClass}`}
+       style={{ animationDelay: `${idx * 0.3}s` }}>
         <span
           className={styles.tag}
           style={{ background: data.category.color }}

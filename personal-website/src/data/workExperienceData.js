@@ -1,6 +1,7 @@
 export const workExperienceData = [
   {
     company: "Switchboard, MD",
+    logo: "/images/logos/sbmd_logo.jpeg",
     role: "Returning SWE Intern",
     period: "May 2025 – Present",
     location: "Remote",
@@ -68,6 +69,7 @@ export const workExperienceData = [
   },
   {
     company: "University of Pennsylvania",
+    logo: "/images/logos/upenn_logo.png",
     role: "Teaching Assistant",
     period: "Jan. 2024 – Present",
     location: "Philadelphia, PA",
@@ -90,6 +92,7 @@ export const workExperienceData = [
   },
   {
     company: "PennLabs",
+    logo: "/images/logos/penn_labs_logo.jpeg",
     role: "Android Engineer",
     period: "Jan. 2024 – Present",
     location: "Philadelphia, PA",
@@ -117,6 +120,7 @@ export const workExperienceData = [
   },
   {
     company: "xLab: Safe Autonomous Systems Lab",
+    logo: "/images/logos/xlab_logo.png",
     role: "Autonomous Vehicle Engineer",
     period: "Sept. 2024 – Feb. 2025",
     location: "Philadelphia, PA",
@@ -139,6 +143,7 @@ export const workExperienceData = [
   },
   {
     company: "Switchboard, MD",
+    logo: "/images/logos/sbmd_logo.jpeg",
     role: "SWE Intern",
     period: "May 2024 – Aug. 2024",
     location: "Remote",
@@ -194,6 +199,7 @@ export const workExperienceData = [
   },
   {
     company: "NEMOS Lab at the Colorado School of Mines",
+    logo: "/images/logos/mines_logo.svg",
     role: "Mobile Developer & Researcher",
     period: "May 2022 – Aug. 2022",
     location: "Golden, CO",
