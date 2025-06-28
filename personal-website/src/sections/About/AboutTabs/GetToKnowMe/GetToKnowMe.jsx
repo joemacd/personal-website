@@ -14,7 +14,7 @@ export default function GetToKnowMe() {
   useEffect(() => {
     const timer = setInterval(
       () => setIdx((i) => (i + 1) % avatars.length),
-      1500
+      1500,
     );
     return () => clearInterval(timer);
   }, [avatars.length]);
@@ -38,10 +38,12 @@ export default function GetToKnowMe() {
         </div>
 
         <div className={styles.info}>
-          <h1 className={styles.name}>Hi, I'm Joe!</h1>
-          <h2 className={styles.subtitle}>I'm a Junior Studying CS@Penn</h2>
+          <h1 className={styles.name}>Hi, I&#39;m Joe!</h1>
+          <h2 className={styles.subtitle}>I&#39;m a Junior Studying CS@Penn</h2>
           <p className={styles.tagline}>
-            I enjoy learning new things and applying my knowledge to engineer unique solutions to relevant problems! Currently looking for opportunities in tech, finance, and more.
+            I enjoy learning new things and applying my knowledge to engineer
+            unique solutions to relevant problems! Currently looking for
+            opportunities in tech, finance, and more.
           </p>
           <a
             href="/resume/MacDougall_Resume.pdf"

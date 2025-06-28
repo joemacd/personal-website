@@ -54,20 +54,20 @@ export const projects = [
   },
   {
     titleCard: {
-      title: "Analysis of Language in Amazon Reviews (CIS 5450 Final Project)",
+      title: "Lane Detection Software (xLab: Safe Autonomous Systems Lab)",
       descriptionPreview:
-        "This project focuses on sentiment analysis with the aim of exploring how language in product reviews correlates with positive or negative emotions and how this relationship evolves over time. Components of this project include: Exploratory Data Analysis, NLP (VADER sentiment analysis), keyword spotting, hypothesis testing, and predictive modeling (random forest, SMOTE, XGBRegressor).",
-      imageUrl: "/images/projects/amazon_review_wordcloud.png",
-      repoUrl: "https://github.com/joemacd/AmazonReviews",
+        "Developed lane detection software for F1Eighteenth (1/18th scale autonomous car).",
+      imageUrl: "/images/projects/xlab_lane_detection.png",
       starred: false,
     },
   },
   {
     titleCard: {
-      title: "Lane Detection Software (xLab: Safe Autonomous Systems Lab)",
+      title: "Analysis of Language in Amazon Reviews (CIS 5450 Final Project)",
       descriptionPreview:
-        "Developed lane detection software for F1Eighteenth (1/18th scale autonomous car).",
-      imageUrl: "/images/projects/xlab_lane_detection.png",
+        "This project focuses on sentiment analysis with the aim of exploring how language in product reviews correlates with positive or negative emotions and how this relationship evolves over time. Components of this project include: Exploratory Data Analysis, NLP (VADER sentiment analysis), keyword spotting, hypothesis testing, and predictive modeling (random forest, SMOTE, XGBRegressor).",
+      imageUrl: "/images/projects/amazon_review_wordcloud.png",
+      repoUrl: "https://github.com/joemacd/AmazonReviews",
       starred: false,
     },
   },

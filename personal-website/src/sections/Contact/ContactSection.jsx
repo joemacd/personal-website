@@ -21,13 +21,14 @@ export default function ContactSection() {
     emailjs.send(serviceId, template, values, publicKey).then(
       (result) => {
         alert("Message Sent Successfully :)");
+        console.log(result);
       },
       (error) => {
         alert(
-          "We Ran Into An Error Sending Your Message. Please Try Again Later!"
+          "We Ran Into An Error Sending Your Message. Please Try Again Later!",
         );
         console.log(error.text);
-      }
+      },
     );
   };
   return (

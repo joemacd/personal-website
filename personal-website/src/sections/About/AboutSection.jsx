@@ -81,6 +81,8 @@ export default function AboutSection() {
 
   const MOUTH_X = 32;
 
+  const isLastTab = selectedPanel === panels.length - 1;
+
   const handlePetTheDog = () => {
     if (dogState == "run") return;
 
@@ -99,7 +101,6 @@ export default function AboutSection() {
     }
   }, [selectedPanel]);
 
-
   const handlePanelClick = (index) => {
     const panel = panelRefs[index].current;
     if (!panel) return;
@@ -116,7 +117,7 @@ export default function AboutSection() {
     if (dogX == offsetX) return; //if we click the same panel then no extra movement
 
     //flip direction based on where we're going (i.e., where scruffy is walking)
-    setDirection((prevX) => (offsetX >= dogX ? 1 : -1));
+    setDirection(() => (offsetX >= dogX ? 1 : -1));
 
     //start running
     setDogState("run");
@@ -131,11 +132,11 @@ export default function AboutSection() {
     }, 1500);
   };
 
-  const mouthOffset = 32 * 3;
-  const bubbleLeft = direction === 1 ? mouthOffset : mouthOffset - 48 * 3;
+  // const mouthOffset = 32 * 3;
+  // const bubbleLeft = direction === 1 ? mouthOffset : mouthOffset - 48 * 3;
 
   return (
-    <div className = {styles.aboutSection}>
+    <div className={styles.aboutSection}>
       <div className={styles.popupContainer} ref={popupRef}>
         {selectedPanel === 0 && <GetToKnowMe />}
         {selectedPanel === 1 && <WorkExperience />}
@@ -165,8 +166,8 @@ export default function AboutSection() {
                   dogState === "run"
                     ? styles.dog_running
                     : dogState === "wag"
-                    ? styles.dog_wag_tail
-                    : styles.dog_sit
+                      ? styles.dog_wag_tail
+                      : styles.dog_sit
                 }
                 style={{
                   transform: `scaleX(${
@@ -181,7 +182,7 @@ export default function AboutSection() {
 
               {(dogState === "sit" || dogState === "wag") && (
                 <div
-                  className={styles.bubble}
+                  className={`${styles.bubble} ${isLastTab ? styles.bubbleLeft : ""}`}
                   onClick={() => setIsBubbleHidden(!isBubbleHidden)}
                   data-direction={direction}
                   style={

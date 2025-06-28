@@ -27,11 +27,16 @@ export default function Education() {
       </div>
 
       <div className={styles.classesSection}>
-        <h3 className={`${styles.sectionTitle} ${styles.fadeUp}`}>Relevant Coursework</h3>
+        <h3 className={`${styles.sectionTitle} ${styles.fadeUp}`}>
+          Relevant Coursework
+        </h3>
         <div className={styles.grid}>
           {classesList.map((cls, idx) => (
-            <div key={idx} className={`${styles.card} ${styles.fadeUp}`}
-              style={{ animationDelay: `${0.2 + idx * 0.1}s` }}>
+            <div
+              key={idx}
+              className={`${styles.card} ${styles.fadeUp}`}
+              style={{ animationDelay: `${0.2 + idx * 0.1}s` }}
+            >
               <div className={styles.cardHeader}>
                 <h4 className={styles.classTitle}>{cls.title}</h4>
                 <span className={styles.grade}>{cls.grade}</span>

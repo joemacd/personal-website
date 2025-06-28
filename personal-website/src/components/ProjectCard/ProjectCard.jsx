@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
 import { FaGithub, FaVideo } from "react-icons/fa"; // or react-icons/fa
 import styles from "./ProjectCard.module.css";
@@ -11,7 +11,7 @@ export default function ProjectCard({
   repoUrl,
   demoUrl,
   starred,
-  onClick,
+  // onClick,
 }) {
   const stop = (e) => e.stopPropagation();
   const [expanded, setExpanded] = useState(false);
@@ -19,10 +19,10 @@ export default function ProjectCard({
   return (
     <div
       className={`${styles.card} ${starred ? styles.starred : ""}`}
-      onClick={onClick}
+      // onClick={onClick}
       role="button"
       tabIndex={0}
-      onKeyDown={(e) => e.key === "Enter" && onClick()}
+      // onKeyDown={(e) => e.key === "Enter" && onClick()}
     >
       {starred && <div className={styles.star}>★</div>}
 
@@ -37,9 +37,7 @@ export default function ProjectCard({
         <p className={styles.description}>
           {descriptionPreview}
           {descriptionReadMore && expanded && (
-            <span>
-              {" "}{descriptionReadMore}
-            </span>
+            <span> {descriptionReadMore}</span>
           )}
           {descriptionReadMore && (
             <button
@@ -56,12 +54,22 @@ export default function ProjectCard({
 
         <div className={styles.icons}>
           {repoUrl && (
-            <a href={repoUrl} target="_blank" rel="noopener noreferrer" onClick={stop}>
+            <a
+              href={repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={stop}
+            >
               <FaGithub />
             </a>
           )}
           {demoUrl && (
-            <a href={demoUrl} target="_blank" rel="noopener noreferrer" onClick={stop}>
+            <a
+              href={demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={stop}
+            >
               <FaVideo />
             </a>
           )}
@@ -72,12 +80,12 @@ export default function ProjectCard({
 }
 
 ProjectCard.propTypes = {
-  title:       PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   descriptionPreview: PropTypes.string.isRequired,
   descriptionReadMore: PropTypes.string,
-  imageUrl:    PropTypes.string.isRequired,
-  repoUrl:     PropTypes.string,
-  demoUrl:     PropTypes.string,
-  starred:     PropTypes.bool,
-  onClick:     PropTypes.func.isRequired,
+  imageUrl: PropTypes.string.isRequired,
+  repoUrl: PropTypes.string,
+  demoUrl: PropTypes.string,
+  starred: PropTypes.bool,
+  // onClick: PropTypes.func.isRequired,
 };

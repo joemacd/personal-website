@@ -1,4 +1,3 @@
-import { useState, useCallback } from "react";
 import styles from "./ProjectSection.module.css";
 
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
@@ -6,11 +5,11 @@ import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import { projects } from "../../data/projects";
 
 export default function ProjectsSection() {
-  const [selectedProject, setSelectedProject] = useState(null);
+  // const [selectedProject, setSelectedProject] = useState(null);
 
-  const handleCardClick = useCallback((proj) => {
-    setSelectedProject(proj);
-  }, []);
+  // const handleCardClick = useCallback((proj) => {
+  //   setSelectedProject(proj);
+  // }, []);
 
   return (
     <section id="projects" className={styles.section}>
@@ -21,7 +20,8 @@ export default function ProjectsSection() {
             className={styles.fadeUp}
             style={{ animationDelay: `${idx * 0.1}s` }}
           >
-            <ProjectCard {...p.titleCard} onClick={() => handleCardClick(p)} />
+            <ProjectCard {...p.titleCard} />{" "}
+            {/*onClick={() => handleCardClick(p)}*/}
           </div>
         ))}
       </div>
