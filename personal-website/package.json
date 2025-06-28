@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Personal Website for joemacd.",
   "main": "index.js",
+  "homepage": "https://joemacd.github.io/personal-website",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
