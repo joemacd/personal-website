@@ -14,7 +14,7 @@ export default function GetToKnowMe() {
   useEffect(() => {
     const timer = setInterval(
       () => setIdx((i) => (i + 1) % avatars.length),
-      1500,
+      1500
     );
     return () => clearInterval(timer);
   }, [avatars.length]);
@@ -47,7 +47,8 @@ export default function GetToKnowMe() {
           </p>
           <a
             href="/resume/MacDougall_Resume.pdf"
-            download
+            target="_blank"
+            rel="noopener noreferrer"
             className={styles.cta}
           >
             View Resume
