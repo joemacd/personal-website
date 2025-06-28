@@ -66,7 +66,6 @@ const skillsData = [
     skills: [
       { name: "Python", Icon: FaPython },
       { name: "Pandas", Icon: SiPandas },
-      // { name: "Polars", Icon: FaDatabase },
       { name: "TensorFlow", Icon: SiTensorflow },
       { name: "Embedded ML", Icon: FaMicrochip },
       { name: "OpenCV", Icon: SiOpencv },

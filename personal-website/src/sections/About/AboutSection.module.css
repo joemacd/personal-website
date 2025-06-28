@@ -8,23 +8,19 @@
 .aboutSection {
   display: flex;
   flex-direction: column;
-  height: 100%;              /* 100% of the .content area under header */
+  height: 100%;
   background: #8ee0f2;
 }
 
 .about {
   position: relative;
   padding: 1rem 1rem 1rem;
-  /* max-width: 1160px; */
   width: 98%;
   margin: 0 auto;
   border: 2px solid #ffffff;
   border-radius: 1rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
   overflow: visible;
-
-  /* background-color: rgba(142, 224, 242, 0.8); */
-  /* background-color: rgba(255, 255, 255, 1); */
   background-color: #111827;
 }
 
@@ -185,7 +181,7 @@
 }
 
 .panel.selected {
-  background: #e0f4ff; /* light-blue highlight */
+  background: #e0f4ff;
   box-shadow: 0 6px 16px rgba(0, 122, 255, 0.2);
   border: 2px solid #007aff;
   color: #000000;
@@ -215,7 +211,6 @@
   z-index: 150;
   display: flex;
   justify-content: center;
-  /* background-color: #8ee0f2; */
 }
 
 /* ensures dogWrapper can remain absolutely positioned */
@@ -275,7 +270,7 @@
     left: 80%;
   }
 
-  /* undo changes to last index tab */
+  /* undo changes to last indexed tab */
   .bubbleLeft {
     transform: translateX(0);
   }

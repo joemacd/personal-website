@@ -19,7 +19,7 @@
   gap: 3rem;
 }
 
-/* Name, Social, & Location sCombined Header Styler */
+/* Name, Social, & Locations Combined Header Styler */
 .namesocialslocationheader {
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@
 /* Site Nav Bar */
 .nav {
   display: flex;
-  gap: 4rem; /* uniform spacing between buttons */
+  gap: 4rem;
 }
 
 .nav button {

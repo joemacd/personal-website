@@ -1,5 +1,3 @@
-// src/data/projects.js
-
 export const projects = [
   {
     titleCard: {

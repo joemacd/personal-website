@@ -56,9 +56,7 @@ export default function AboutSection() {
 
   const [isBubbleHidden, setIsBubbleHidden] = useState(false);
 
-  /*
-   *Handle dog scale according to the width of the screen
-   */
+  //Handle dog scale according to the width of the screen
   const [dogScale, setDogScale] = useState(getScaleForWidth(window.innerWidth));
   function getScaleForWidth(width) {
     if (width < 480) {
