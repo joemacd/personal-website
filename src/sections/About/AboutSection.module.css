@@ -1,7 +1,7 @@
 :root {
-  --dog-image-sit-url: url("/public/Dog Sprites/Dog 1 - Beagle/Sit/dog_1_sit.png");
-  --dog-image-wag-url: url("/public/Dog Sprites/Dog 1 - Beagle/Wag/dog_1_wag_sheet.png");
-  --dog-image-walk-url: url("/public/Dog Sprites/Dog 1 - Beagle/Walk/dog_1_walk_sheet.png");
+  --dog-image-sit-url: url("/src/assets/Dog Sprites/Dog 1 - Beagle/Sit/dog_1_sit.png");
+  --dog-image-wag-url: url("/src/assets/Dog Sprites/Dog 1 - Beagle/Wag/dog_1_wag_sheet.png");
+  --dog-image-walk-url: url("/src/assets/Dog Sprites/Dog 1 - Beagle/Walk/dog_1_walk_sheet.png");
 }
 
 /* ABOUT */

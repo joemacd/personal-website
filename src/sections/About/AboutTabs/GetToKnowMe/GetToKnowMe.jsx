@@ -2,13 +2,15 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./GetToKnowMe.module.css";
 
+import babypic1 from "../../../../assets/images/avatars/joe_baby_1.png";
+import babypic2 from "../../../../assets/images/avatars/joe_baby_2.png";
+import babypic3 from "../../../../assets/images/avatars/joe_baby_3.png";
+import babypic4 from "../../../../assets/images/avatars/joe_baby_4.png";
+
+import resume from "../../../../assets/resume/MacDougall_Resume.pdf";
+
 export default function GetToKnowMe() {
-  const avatars = [
-    "/images/avatars/joe_baby_1.png",
-    "/images/avatars/joe_baby_2.png",
-    "/images/avatars/joe_baby_3.png",
-    "/images/avatars/joe_baby_4.png",
-  ];
+  const avatars = [babypic1, babypic2, babypic3, babypic4];
   const [idx, setIdx] = useState(0);
 
   useEffect(() => {
@@ -46,7 +48,7 @@ export default function GetToKnowMe() {
             opportunities in tech, finance, and more.
           </p>
           <a
-            href="/resume/MacDougall_Resume.pdf"
+            href={resume}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.cta}

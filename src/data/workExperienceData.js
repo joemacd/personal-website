@@ -1,7 +1,13 @@
+import sbmdLogo from "../assets/images/logos/sbmd_logo.jpeg";
+import upennLogo from "../assets/images/logos/upenn_logo.png";
+import pennLabsLogo from "../assets/images/logos/penn_labs_logo.jpeg";
+import xlabLogo from "../assets/images/logos/xlab_logo.png";
+import nemosLabLogo from "../assets/images/logos/mines_logo.svg";
+
 export const workExperienceData = [
   {
     company: "Switchboard, MD",
-    logo: "/images/logos/sbmd_logo.jpeg",
+    logo: sbmdLogo,
     role: "Returning SWE Intern",
     period: "May 2025 – Present",
     location: "Remote",
@@ -69,7 +75,7 @@ export const workExperienceData = [
   },
   {
     company: "University of Pennsylvania",
-    logo: "/images/logos/upenn_logo.png",
+    logo: upennLogo,
     role: "Teaching Assistant",
     period: "Jan. 2024 – Present",
     location: "Philadelphia, PA",
@@ -92,7 +98,7 @@ export const workExperienceData = [
   },
   {
     company: "PennLabs",
-    logo: "/images/logos/penn_labs_logo.jpeg",
+    logo: pennLabsLogo,
     role: "Android Engineer",
     period: "Jan. 2024 – Present",
     location: "Philadelphia, PA",
@@ -120,7 +126,7 @@ export const workExperienceData = [
   },
   {
     company: "xLab: Safe Autonomous Systems Lab",
-    logo: "/images/logos/xlab_logo.png",
+    logo: xlabLogo,
     role: "Autonomous Vehicle Engineer",
     period: "Sept. 2024 – Feb. 2025",
     location: "Philadelphia, PA",
@@ -143,7 +149,7 @@ export const workExperienceData = [
   },
   {
     company: "Switchboard, MD",
-    logo: "/images/logos/sbmd_logo.jpeg",
+    logo: sbmdLogo,
     role: "SWE Intern",
     period: "May 2024 – Aug. 2024",
     location: "Remote",
@@ -199,7 +205,7 @@ export const workExperienceData = [
   },
   {
     company: "NEMOS Lab at the Colorado School of Mines",
-    logo: "/images/logos/mines_logo.svg",
+    logo: nemosLabLogo,
     role: "Mobile Developer & Researcher",
     period: "May 2022 – Aug. 2022",
     location: "Golden, CO",
