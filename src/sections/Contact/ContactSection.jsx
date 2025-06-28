@@ -7,7 +7,7 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 
 export default function ContactSection() {
   const template = process.env.REACT_APP_EMAILJS_TEMPLATE;
-  const publicKey = process.env.REACT_APP_EMAILJS_PUBLICKEY;
+  const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
   const serviceId = process.env.REACT_APP_EMAILJS_SERVICEID;
 
   const [values, setValues] = useState({ name: "", subject: "", message: "" });
@@ -25,10 +25,10 @@ export default function ContactSection() {
       },
       (error) => {
         alert(
-          "We Ran Into An Error Sending Your Message. Please Try Again Later!",
+          "We Ran Into An Error Sending Your Message. Please Try Again Later!"
         );
         console.log(error.text);
-      },
+      }
     );
   };
   return (
