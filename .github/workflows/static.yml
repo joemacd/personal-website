@@ -35,6 +35,10 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+        env:
+          REACT_APP_EMAILJS_PUBLIC_KEY: ${{ secrets.EMAILJS_PUBLIC_KEY }}
+          REACT_APP_EMAILJS_SERVICE: ${{ secrets.EMAILJS_SERVICE }}
+          REACT_APP_EMAILJS_TEMPLATE: ${{ secrets.EMAILJS_TEMPLATE }}
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
