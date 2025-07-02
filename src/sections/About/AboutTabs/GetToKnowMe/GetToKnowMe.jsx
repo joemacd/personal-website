@@ -14,6 +14,14 @@ export default function GetToKnowMe() {
   const [idx, setIdx] = useState(0);
 
   useEffect(() => {
+    avatars.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+      img.onerror = () => console.warn(`Failed to preload: ${src}`);
+    });
+  }, []);
+
+  useEffect(() => {
     const timer = setInterval(
       () => setIdx((i) => (i + 1) % avatars.length),
       1500
