@@ -1,29 +1,56 @@
 export const classesList = [
   {
+    title: "CIS 5480: Operating Systems Design and Implementation",
+    description:
+      "Core OS concepts including processes, threads, synchronization and deadlocks, CPU scheduling, virtual memory and paging, file systems, I/O, and virtualization. Emphasis on concurrent programming and systems programming.",
+    skills: ["C", "POSIX", "Concurrency", "Threads", "Synchronization", "OS"],
+    grade: "*In Progress*",
+  },
+  {
+    title: "CIS 5210: Artificial Intelligence",
+    description:
+      "Foundations of AI: state-space search, heuristic search, constraint satisfaction, probabilistic reasoning (Bayes nets, HMMs), decision making, and introductory machine learning elements.",
+    skills: ["Python", "Search", "Heuristics", "Probability", "AI"],
+    grade: "*In Progress*",
+  },
+  {
+    title: "CIS 5500: Database and Information Systems",
+    description:
+      "Relational model, E/R modeling, SQL, normalization, indexing and hashing, transactions and concurrency control, recovery, and an introduction to query optimization and distributed data systems.",
+    skills: [
+      "SQL",
+      "Database Design",
+      "Transactions",
+      "Indexing",
+      "Normalization",
+    ],
+    grade: "*In Progress*",
+  },
+  {
     title: "CIS 3200: Introduction to Algorithms",
     description:
-      "This course gives a comprehensive introduction to design and analysis of algorithms. You will learn about problem-solving; advanced data structures such as universal hashing and red-black trees; advanced design and analysis techniques such as dynamic programming and amortized analysis; graph algorithms such as minimum spanning trees and network flows; NP-completeness theory; and approximation algorithms.",
+      "Comprehensive study of algorithm design and analysis. Topics include problem-solving strategies, advanced data structures (universal hashing, red-black trees), dynamic programming, amortized analysis, graph algorithms (minimum spanning trees, network flows), NP-completeness, and approximation algorithms.",
     skills: ["CS Theory", "Algorithms"],
     grade: "A+",
   },
   {
     title: "CIS 2400: Introduction to Computer Systems",
     description:
-      "This bottom-up course begins with transistors and simple computer hardware structures, continues with low-level programming using primitive machine instructions, and finishes with an introduction to the C programming language.",
+      "Bottom-up exploration of computer systems. Begins with transistors and basic hardware structures, covers machine instructions and low-level programming, and concludes with the C programming language.",
     skills: ["C", "Assembly"],
     grade: "A+",
   },
   {
     title: "ESE 3600: TinyML - Tiny Machine Learning for Embedded Systems",
     description:
-      "This is an introductory course at the intersection of Machine Learning (ML) and Embedded Internet of Things (IoT) Devices which covers machine learning applications and algorithms using embedded hardware, sensors, actuators and software.",
+      "Introductory course at the intersection of machine learning and IoT. Focuses on implementing ML applications on embedded devices using hardware, sensors, actuators, and specialized software.",
     skills: ["Python", "TensorFlow", "Embedded Systems"],
     grade: "A",
   },
   {
     title: "CIS 5450: Big Data Analytics",
     description:
-      "Topics of this course include collecting, wrangling, and structuring data; programming models for performing computation scalably across many compute nodes; approaches to converting algorithms to such programming models; toolkits for data analysis; and popular distributed frameworks for analytics tasks.",
+      "Covers techniques for collecting, wrangling, and structuring large datasets. Emphasis on scalable computation models, distributed frameworks, and modern toolkits for analysis and machine learning.",
     skills: [
       "Python",
       "Pandas",
@@ -37,7 +64,7 @@ export const classesList = [
   {
     title: "CIS 1210: Data Structures and Algorithms",
     description:
-      "This is a course about Algorithms and Data Structures using the Java programming language. We introduce the basic concepts about complexity of an algorithm and methods on how to compute the running time of algorithms. Then, we describe data structures like stacks, queues, maps, trees, and graphs, and we construct efficient algorithms based on these representations.",
+      "Covers core data structures (stacks, queues, maps, trees, graphs) and algorithmic analysis using Java. Includes complexity analysis, runtime evaluation, and construction of efficient algorithms.",
     skills: [
       "CS Theory",
       "Java",
@@ -50,28 +77,28 @@ export const classesList = [
   {
     title: "STAT 4300: Probability",
     description:
-      "Understanding discrete and continuous sample spaces and probability; random variables, distributions, independence; expectation and generating functions; Markov chains and recurrence theory.",
+      "Covers discrete and continuous probability spaces, random variables and distributions, independence, expectation, generating functions, and Markov chains.",
     skills: [],
     grade: "A+",
   },
   {
     title: "CIS 2620: Automata, Computability and Complexity",
     description:
-      "A course that explores questions fundamental to computer science such as which problems cannot be solved by computers, can we formalize computing as a mathematical concept without relying upon the specifics of programming languages and computing platforms, and which problems can be solved efficiently.",
+      "Studies the mathematical foundations of computation. Topics include automata theory, computability, computational complexity, and the limits of efficient problem solving.",
     skills: [],
     grade: "A",
   },
   {
     title: "CIS 1600: Mathematical Foundations of Computer Science",
     description:
-      "A introduction to math concepts that form the backbone of the majority of computer science. Topics covered include sets, functions, permutations and combinations, discrete probability, expectation, mathematical Induction and graph theory.",
+      "Introduction to mathematical concepts underpinning computer science: sets, functions, counting techniques, discrete probability, expectation, induction, and graph theory.",
     skills: ["CS Theory", "Probability"],
     grade: "A-",
   },
   {
     title: "CIS 1200: Programming Languages & Techniques",
     description:
-      "A fast-paced introduction to the fundamental concepts of programming and software design.",
+      "Fast-paced introduction to software design and programming paradigms. Topics include functional programming with OCaml and object-oriented programming with Java.",
     skills: ["Java", "OCaml", "OOP"],
     grade: "A",
   },

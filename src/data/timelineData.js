@@ -1,6 +1,47 @@
 export const timelineData = [
   {
-    text: ["Enabling real-time call transcription with AWS Chime SDK."],
+    text: [
+      "Building voice-to-voice AI platform for patient calls on Twilio with patient record lookups, quick specialized-line transfers, and urgency detection.",
+    ],
+    date: "Summer 2025",
+    category: {
+      tag: "Switchboard, MD",
+      color: "#00C2FD",
+    },
+    link: {
+      url: "https://www.switchboardmd.com/",
+      text: "See More",
+    },
+    skills: [
+      {
+        skill: "Twilio",
+        skillLink: "https://www.twilio.com/en-us",
+      },
+      { skill: "React", inline: "ci-react", skillLink: "https://react.dev/" },
+      {
+        skill: "TypeScript",
+        inline: "ci-typescript",
+        skillLink: "https://www.typescriptlang.org/",
+      },
+      {
+        skill: "JavaScript",
+        inline: "ci-javascript",
+        skillLink: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      },
+      {
+        skill: "GraphQL",
+        inline: "ci-graphql",
+        skillLink: "https://graphql.org/",
+      },
+      {
+        skill: "Bedrock",
+        inline: "ci-aws",
+        skillLink: "https://aws.amazon.com/bedrock/",
+      },
+    ],
+  },
+  {
+    text: ["Enabling real-time call transcription with Amazon Chime SDK."],
     date: "Summer 2025",
     category: {
       tag: "Switchboard, MD",
@@ -23,12 +64,12 @@ export const timelineData = [
       },
       { skill: "React", inline: "ci-react", skillLink: "https://react.dev/" },
       {
-        skill: "Typescript",
+        skill: "TypeScript",
         inline: "ci-typescript",
         skillLink: "https://www.typescriptlang.org/",
       },
       {
-        skill: "Javascript",
+        skill: "JavaScript",
         inline: "ci-javascript",
         skillLink: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       },
@@ -41,6 +82,11 @@ export const timelineData = [
         skill: "Lambda",
         inline: "ci-aws",
         skillLink: "https://aws.amazon.com/lambda/",
+      },
+      {
+        skill: "Bedrock",
+        inline: "ci-aws",
+        skillLink: "https://aws.amazon.com/bedrock/",
       },
       {
         skill: "Cognito",
@@ -104,7 +150,7 @@ export const timelineData = [
   },
   {
     text: [
-      "Researched in the Safe Automated Systems Lab, developing lane detection software F1Eighteenth: a 1/18th scale autonomous car.",
+      "Researched in the xLab: Safe Autonomous Systems Lab, developing lane detection software F1Eighteenth: a 1/18th scale autonomous car.",
     ],
     date: "Fall - Winter 2024",
     category: {
@@ -154,7 +200,9 @@ export const timelineData = [
     ],
   },
   {
-    text: ["Launched a subletting marketplace using the Google Maps API."],
+    text: [
+      "Launched a subletting marketplace using the Google Maps API (100+ active listings).",
+    ],
     date: "Spring - Fall 2024",
     category: {
       tag: "PennLabs",
@@ -180,7 +228,7 @@ export const timelineData = [
   },
   {
     text: [
-      "Created the MDAware Demo App to showcase patient message classification model features, logic, and impact; used at business expos and client conferences.",
+      "Created the MDAware Demo App to showcase patient message classification model features, logic, and impact; used in a Google Ventures pitch and helped drive two contract expansions (≈ $400k ARR pipeline).",
     ],
     date: "Summer 2024",
     category: {
@@ -204,12 +252,12 @@ export const timelineData = [
         skillLink: "https://www.python.org/",
       },
       {
-        skill: "Typescript",
+        skill: "TypeScript",
         inline: "ci-typescript",
         skillLink: "https://www.typescriptlang.org/",
       },
       {
-        skill: "Javascript",
+        skill: "JavaScript",
         inline: "ci-javascript",
         skillLink: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       },
@@ -251,7 +299,7 @@ export const timelineData = [
     skills: [
       { skill: "React", inline: "ci-react", skillLink: "https://react.dev/" },
       {
-        skill: "Typescript",
+        skill: "TypeScript",
         inline: "ci-typescript",
         skillLink: "https://www.typescriptlang.org/",
       },
@@ -310,7 +358,7 @@ export const timelineData = [
           "https://developer.android.com/studio?_gl=1*mtik*_up*MQ..&gclid=CjwKCAjw3f_BBhAPEiwAaA3K5H-KNxG96YtdGuo7wbrqczljmzRuqHhsMxWdadLJom3asHO6hS53oRoCo0EQAvD_BwE&gclsrc=aw.ds&gbraid=0AAAAAC-IOZluaKqB6_LHoqYKXYAd00Wgs",
       },
       {
-        skill: "XCode",
+        skill: "Xcode",
         inline: "ci-xcode",
         skillLink: "https://developer.apple.com/xcode/",
       },

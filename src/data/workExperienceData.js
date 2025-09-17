@@ -11,9 +11,9 @@ export const workExperienceData = [
     role: "Returning SWE Intern",
     period: "May 2025 – Present",
     location: "Remote",
-    summary: "Working on Telephony systems and voice-to-voice AI",
+    summary: "Working on voice-to-voice AI systems",
     bullets: [
-      "Building a PBX server with Asterisk to support voice-to-voice AI and integrating real-time call transcription using AWS Chime SDK and Nova Sonic.",
+      "Developing a real-time voice-to-voice AI platform for patient calls—enabling live transcription, smart call routing, and automated transfers to improve care-team responsiveness.",
     ],
     skills: [
       {
@@ -37,6 +37,11 @@ export const workExperienceData = [
         skillLink: "https://aws.amazon.com/lambda/",
       },
       {
+        skill: "Bedrock",
+        inline: "ci-aws",
+        skillLink: "https://aws.amazon.com/bedrock/",
+      },
+      {
         skill: "Cognito",
         inline: "ci-aws",
         skillLink: "https://aws.amazon.com/cognito/",
@@ -49,17 +54,20 @@ export const workExperienceData = [
 
       { skill: "React", inline: "ci-react", skillLink: "https://react.dev/" },
       {
-        skill: "Typescript",
+        skill: "TypeScript",
         inline: "ci-typescript",
         skillLink: "https://www.typescriptlang.org/",
       },
       {
-        skill: "Javascript",
+        skill: "JavaScript",
         inline: "ci-javascript",
         skillLink: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       },
+      {
+        skill: "Twilio",
+        skillLink: "https://www.twilio.com/en-us",
+      },
       { skill: "Asterisk", skillLink: "https://www.asterisk.org/" },
-
       {
         skill: "Linux",
         inline: "ci-linux",
@@ -77,7 +85,7 @@ export const workExperienceData = [
     company: "University of Pennsylvania",
     logo: upennLogo,
     role: "Teaching Assistant",
-    period: "Jan. 2024 – Present",
+    period: "Jan 2025 – Present",
     location: "Philadelphia, PA",
     summary:
       "Serve as a Teaching Assistant for CIS 1210: Data Structures and Algorithms.",
@@ -106,7 +114,7 @@ export const workExperienceData = [
       "Maintain and develop University of Pennsylvania mobile apps (100k+ users).",
     bullets: [
       "Served as a project mentor to onboard new developers (Fall 2024 cohort).",
-      "Launched a subletting marketplace using Google Maps API (Spring–Fall 2024).",
+      "Launched a subletting marketplace using Google Maps API, reaching 100+ active listings (Spring–Fall 2024).",
       "Created a mobile homepage feature for group study room booking (Spring 2024).",
     ],
     skills: [
@@ -155,7 +163,7 @@ export const workExperienceData = [
     location: "Remote",
     summary: "Led development of two healthcare SaaS web applications.",
     bullets: [
-      "Built the MDAware Demo App to showcase patient message classification models at expos and conferences.",
+      "Built the MDAware Demo App to showcase patient message classification models to clients—used in a Google Ventures pitch and helped drive two contract expansions (≈ $400k ARR pipeline) in its first month.",
       "Created the MDAware Pilot Assessment App, a data-visualization tool for client hospital datasets.",
     ],
     skills: [
@@ -171,12 +179,12 @@ export const workExperienceData = [
         skillLink: "https://www.python.org/",
       },
       {
-        skill: "Typescript",
+        skill: "TypeScript",
         inline: "ci-typescript",
         skillLink: "https://www.typescriptlang.org/",
       },
       {
-        skill: "Javascript",
+        skill: "JavaScript",
         inline: "ci-javascript",
         skillLink: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       },
@@ -220,7 +228,7 @@ export const workExperienceData = [
           "https://developer.android.com/studio?_gl=1*mtik*_up*MQ..&gclid=CjwKCAjw3f_BBhAPEiwAaA3K5H-KNxG96YtdGuo7wbrqczljmzRuqHhsMxWdadLJom3asHO6hS53oRoCo0EQAvD_BwE&gclsrc=aw.ds&gbraid=0AAAAAC-IOZluaKqB6_LHoqYKXYAd00Wgs",
       },
       {
-        skill: "XCode",
+        skill: "Xcode",
         inline: "ci-xcode",
         skillLink: "https://developer.apple.com/xcode/",
       },
