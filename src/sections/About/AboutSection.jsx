@@ -56,12 +56,20 @@ export default function AboutSection() {
 
   const [isBubbleHidden, setIsBubbleHidden] = useState(false);
 
+  //add a mobile flag (updates on resize)
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
   //Handle dog scale according to the width of the screen
   const [dogScale, setDogScale] = useState(getScaleForWidth(window.innerWidth));
   function getScaleForWidth(width) {
-    if (width < 480) {
+    if (width <= 480) {
       return 1.5;
-    } else if (width < 768) {
+    } else if (width <= 768) {
       return 2.0;
     } else {
       return 2.5;
@@ -185,12 +193,26 @@ export default function AboutSection() {
                   data-direction={direction}
                   style={
                     direction === 1
-                      ? window.innerWidth < 768
+                      ? window.innerWidth <= 768
                         ? { left: `${MOUTH_X - 100}px` }
                         : { left: `${MOUTH_X}px` }
                       : { left: `${MOUTH_X - 48}px` }
                   }
                 >
+                  {/* close button (only shown on small screens) */}
+                  <button
+                    type="button"
+                    className={styles.bubbleClose}
+                    aria-label={
+                      isBubbleHidden ? "Show message" : "Hide message"
+                    }
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setIsBubbleHidden((v) => !v);
+                    }}
+                  >
+                    ×
+                  </button>
                   <strong style={{ fontSize: 15 }}>
                     {dogBubbles[selectedPanel].title}
                   </strong>

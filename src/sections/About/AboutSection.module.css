@@ -116,6 +116,9 @@
   text-align: center;
   font-size: 0.875rem;
   line-height: 1.2;
+
+  /* make children absolute (i.e., close button) */
+  position: absolute;
 }
 
 .bubble p {
@@ -140,6 +143,49 @@
 
 .bubbleLeft::after {
   left: 80%;
+}
+
+/* close button */
+.bubbleClose {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #111827;
+  border-radius: 6px;
+  background: #fff;
+  color: #111827;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.bubbleClose:active {
+  transform: scale(0.96);
+}
+
+/* show the X on mobile/tablet only */
+@media (max-width: 768px) {
+  .bubbleClose {
+    display: inline-flex;
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    border: 2px solid #111827;
+    background: #fff;
+    color: #111827;
+    font-size: 18px;
+    line-height: 1;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
 }
 
 .panels {
